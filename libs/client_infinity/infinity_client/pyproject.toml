@@ -2,7 +2,7 @@
 name = "infinity_client"
 version = "0.0.77"
 description = "A client library for accessing ♾️ Infinity - Embedding Inference Server"
-authors = []
+authors = [{name="michaelfeil",email="<noreply@michaelfeil.eu>"}]
 readme = "README.md"
 packages = [
     {include = "infinity_client"},

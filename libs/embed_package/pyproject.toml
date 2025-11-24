@@ -2,7 +2,7 @@
 name = "embed"
 version = "0.3.0"
 description = "A stable, fast and easy-to-use inference library with a focus on a sync-to-async API"
-authors = ["michaelfeil <me@michaelfeil.eu>"]
+authors = [{name="michaelfeil",email="<noreply@michaelfeil.eu>"}]
 readme = "README.md"
 homepage = "https://github.com/michaelfeil/infinity"
 repository = "https://github.com/michaelfeil/infinity"
