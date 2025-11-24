@@ -1,4 +1,4 @@
-[tool.poetry]
+[project]
 name = "infinity_client"
 version = "0.0.77"
 description = "A client library for accessing ♾️ Infinity - Embedding Inference Server"
@@ -8,6 +8,7 @@ packages = [
     {include = "infinity_client"},
 ]
 include = ["CHANGELOG.md", "infinity_client/py.typed"]
+dynamic = ["dependencies","requires-python"]
 
 
 [tool.poetry.dependencies]

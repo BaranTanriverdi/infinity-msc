@@ -1,4 +1,4 @@
-[tool.poetry]
+[project]
 name = "embed"
 version = "0.3.0"
 description = "A stable, fast and easy-to-use inference library with a focus on a sync-to-async API"
@@ -7,6 +7,8 @@ readme = "README.md"
 homepage = "https://github.com/michaelfeil/infinity"
 repository = "https://github.com/michaelfeil/infinity"
 keywords = ["vector", "embedding", "neural", "search", "sentence-transformers"]
+dynamic=["dependencies","requires-python"]
+
 
 [[tool.poetry.source]]
 name = "pytorch_cpu"
