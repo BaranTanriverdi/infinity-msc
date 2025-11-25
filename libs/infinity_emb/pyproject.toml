@@ -64,8 +64,8 @@ soundfile = {version="^0.12.1", optional=true}
 infinity_emb = "infinity_emb.cli:cli"
 
 [project.optional-dependencies]
-ct2=["ctranslate2","sentence-transformers","torch","transformers"]
-optimum=["optimum"]
+ct2=["ctranslate2","sentence-transformers","torch","transformers[sentencepiece]"]
+optimum=["optimum[onnxruntime]"]
 torch=["sentence-transformers","torch"]
 einops=["einops"]
 logging=["rich"]
@@ -80,7 +80,7 @@ server=[
     "pydantic",
     "rich",
     "typer",
-    "uvicorn",
+    "uvicorn[standard]",
 ]
 all=[
     "colpali-engine",
@@ -100,7 +100,7 @@ all=[
     "torch", 
     "torchvision",
     "typer", 
-    "uvicorn",
+    "uvicorn[standard]",
     "soundfile"
 ]
 tensorrt=["tensorrt"]
