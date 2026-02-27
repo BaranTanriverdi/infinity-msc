@@ -1,0 +1,707 @@
+{
+  "meta": {
+    "runId": "run-2026-02-27-14-42-59",
+    "baseSha": "bb80406b1619aeb8a90d60c947f5f5c9a0ad6c29",
+    "schemaVersion": "1.0.0",
+    "thresholds": {
+      "ok": 0.8,
+      "warn": 0.65
+    },
+    "provenance": {
+      "promptId": "reasoner.v1",
+      "model": "gpt-5.1",
+      "generatedAt": "2026-02-27T14:50:15.618Z"
+    },
+    "telemetry": {
+      "latencyMs": 246416.32724200012,
+      "tokens": {
+        "prompt": 87989,
+        "completion": 12577,
+        "total": 100566
+      },
+      "retries": 0
+    },
+    "passTelemetry": {
+      "extractor": {
+        "promptTokens": 47882,
+        "completionTokens": 4561,
+        "latencyMs": 146012.199132
+      },
+      "reasoner": {
+        "promptTokens": 33427,
+        "completionTokens": 2463,
+        "latencyMs": 15733.503544999985
+      },
+      "verifier": {
+        "promptTokens": 1130,
+        "completionTokens": 297,
+        "latencyMs": 3739.028091000044
+      },
+      "notes": {
+        "promptTokens": 5550,
+        "completionTokens": 5256,
+        "latencyMs": 80931.59647400008
+      }
+    }
+  },
+  "facts": [
+    {
+      "jsonPath": "$.business.userPopulations",
+      "jsonPointer": "/business/userPopulations",
+      "currentValue": [
+        "Data Scientist",
+        "ML Engineer",
+        "Product Manager",
+        "Governance, Compliance & Ethics Officer",
+        "Data Engineer",
+        "Software Developer",
+        "UX Researcher",
+        "Project Manager",
+        "Domain Expert"
+      ],
+      "proposedValue": [
+        "Data Scientist",
+        "ML Engineer",
+        "Product Manager",
+        "Governance, Compliance & Ethics Officer",
+        "Data Engineer",
+        "Software Developer",
+        "UX Researcher",
+        "Project Manager",
+        "Domain Expert"
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "docs/stakeholders.yaml",
+          "startLine": 2,
+          "endLine": 2,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "config"
+        }
+      ],
+      "confidence": 0.1,
+      "gate": "Require",
+      "verifierNotes": "The provided snippet only shows `title: Data Scientist` and does not list or reference the full array of user populations claimed in the fact."
+    },
+    {
+      "jsonPath": "$.meta.title",
+      "jsonPointer": "/meta/title",
+      "currentValue": "ML System Card (GitHub-native, PR-first)",
+      "proposedValue": "ML System Card (GitHub-native, PR-first)",
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 16,
+          "endLine": 16,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.1,
+      "gate": "Require",
+      "verifierNotes": "The README snippet only contains the heading `# Infinity ♾️` and does not mention `ML System Card (GitHub-native, PR-first)` as a title."
+    },
+    {
+      "jsonPath": "$.provenance.changelog[1]",
+      "jsonPointer": "/provenance/changelog/1",
+      "proposedValue": {
+        "date": "2026-02-27T14:44:08.469Z",
+        "summary": "ML System Card run run-2026-02-27-14-42-59 observed 8 changed files",
+        "files": [
+          {
+            "path": "libs/infinity_emb/Docker.template.yaml"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.cpu_auto"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.intel_auto"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/_optional_imports.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/primitives.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py"
+          }
+        ],
+        "runId": "run-2026-02-27-14-42-59",
+        "headSha": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85"
+      },
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "libs/infinity_emb/Docker.template.yaml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/Dockerfile.cpu_auto",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/Dockerfile.intel_auto",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/_optional_imports.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/primitives.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.1,
+      "gate": "Require",
+      "verifierNotes": "The Docker-related snippets only contain comments about command usage and autogenerated warnings; they do not contain any changelog structure, dates, run IDs, SHAs, or file lists as described in the fact."
+    }
+  ],
+  "patch": [
+    {
+      "op": "add",
+      "path": "/provenance/changelog/-",
+      "value": {
+        "date": "2026-02-27T14:44:08.469Z",
+        "summary": "ML System Card run run-2026-02-27-14-42-59 observed 8 changed files",
+        "files": [
+          {
+            "path": "libs/infinity_emb/Docker.template.yaml"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.cpu_auto"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.intel_auto"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/_optional_imports.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/primitives.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py"
+          }
+        ],
+        "runId": "run-2026-02-27-14-42-59",
+        "headSha": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-engineer/changes",
+      "value": "- Updated container build configuration for embeddings in libs/infinity_emb/Docker.template.yaml and CPU/Intel auto Dockerfiles, likely affecting how embedding services are packaged and deployed.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py, which may change when extra libraries (e.g., Optimum) are required vs. optional.\n- Modified embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, potentially impacting the public embedding API or behavior.\n- Updated Optimum-based embedder implementation and utilities in libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and .../utils_optimum.py, which may affect supported model types or runtime performance.\n- Extended or revised unit tests in libs/infinity_emb/tests/unit_test"
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-engineer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-engineer/overview",
+      "value": "This component provides transformer-based text embedding capabilities (e.g., via Optimum-backed models) that can be containerized and deployed through the project’s Docker images. It is primarily consumed by programmatic clients (Python) that need efficient embedding generation for downstream ML workflows, such as retrieval and similarity search. Relevant stakeholder groups appear to be captured under $.business.userPopulations ⚠️, with the overall card identified by $.meta.title ⚠️. Operational and review history is tracked in $.provenance.changelog[1] ⚠️."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-scientist/changes",
+      "value": "- Updated Docker templates and CPU/Intel Dockerfiles to refine runtime environments for embedding workloads.\n- Adjusted `_optional_imports.py` to handle Optimum-related imports more defensively, improving robustness when optional dependencies are absent.\n- Modified `primitives.py` and `transformer/embedder/optimum.py` to refine the Optimum-based embedder interface and internal behavior.\n- Updated `transformer/utils_optimum.py` to improve utility functions around Optimum model handling (e.g., device or dtype management).\n- Extended and/or updated unit tests in `tests/unit_test/transformer/embedder/test_optimum.py` to validate the revised Optimum integration and prevent regressions."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-scientist/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-scientist/overview",
+      "value": "This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer models (through Optimum) for efficient embedding generation in Python workflows. It is intended for model development, evaluation, and deployment pipelines where vector representations are required for search, retrieval, and downstream ML tasks. Primary users likely include Data Scientists (see $.business.userPopulations) ⚠️, who rely on consistent inference behavior, reproducible environments (Docker-based), and tested utilities for model loading, batching, and hardware-specific optimizations."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/domain-expert/changes",
+      "value": "- No significant updates detected to documented user populations in $.business.userPopulations for this run (⚠️).\n- Recent repository changes (e.g., Docker templates, optional imports, Optimum-based embedders, and related tests) primarily affect implementation and infrastructure, not the declared business user populations.\n- If future iterations introduce new user roles (e.g., additional governance, support, or operations personas), these should be reflected explicitly under $.business.userPopulations to keep stakeholder-scoped responsibilities and access expectations accurate."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/domain-expert/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/domain-expert/overview",
+      "value": "This ML system is documented as serving multiple technical and oversight roles in the organization. According to $.business.userPopulations⚠️, the intended users likely include data-centric practitioners (e.g., Data Scientists, ML Engineers) and product-oriented stakeholders (e.g., Product Managers), as well as governance and compliance roles. These groups rely on the system card to understand capability boundaries, integration expectations, and risk considerations for embedding and transformer-based components, particularly around how the model is deployed in production workflows and how responsibilities are distributed across technical and non-technical teams."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-compliance-ethics-officer/changes",
+      "value": "- New provenance entry added at $.provenance.changelog[1], recording this run (ID: run-2026-02-27-14-42-59) and its timestamp.\n- The summary in $.provenance.changelog[1].summary documents that an automated ML System Card run was executed for this update.\n- No additional structured fields (e.g., risk, evaluation, or mitigation sections) are confirmed as changed in this diff ⚠️.\n- From a governance/compliance perspective, this update primarily improves traceability by extending the change history, rather than altering declared behaviors or risks of the ML system ⚠️."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-compliance-ethics-officer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-compliance-ethics-officer/overview",
+      "value": "This ML System Card (⚠️ $.meta.title) documents an embedding component used within the repository’s Python-based stack. It is intended to support oversight by technical and non-technical stakeholders, including ⚠️ Governance, Compliance & Ethics Officers listed in $.business.userPopulations. For this audience, the card should help assess how the embedding system is governed, how changes are tracked over time, and how documentation can be aligned with internal policies on compliance, ethics, and model risk management."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-officer/changes",
+      "value": "- Updated Docker templates and CPU/Intel auto Dockerfiles (`libs/infinity_emb/Docker.template.yaml`, `Dockerfile.cpu_auto`, `Dockerfile.intel_auto`), affecting deployable runtime images.\n- Adjusted optional import handling in `infinity_emb/_optional_imports.py`, which may change how extra dependencies (e.g., Optimum) are conditionally loaded.\n- Modified core primitives in `infinity_emb/primitives.py`, potentially impacting how embedding requests are processed.\n- Updated Optimum-based transformer embedder implementation and utilities (`transformer/embedder/optimum.py`, `transformer/utils_optimum.py`), which may alter model loading or inference behavior.\n- Expanded or revised unit tests for the Optimum embedder (`tests/unit_test/transformer/embedder/test_optimum.py`), strengthening regressio"
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-officer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-officer/overview",
+      "value": "This update concerns the embedding component in `libs/infinity_emb`, which underpins text representation for downstream ML workflows used by Data Scientists (⚠️ from `$.business.userPopulations`). The system is documented in an ML System Card titled ⚠️“ML System Card (GitHub-native, PR-first)” (`$.meta.title`). Governance relevance centers on how model embeddings are produced, the runtime/container environments allowed in production, and test coverage guarding regressions. The new System Card provenance entry (⚠️ `$.provenance.changelog[1]`) logs this run for traceability and aligns changes with specific SHAs for auditable evolution of the embedding stack."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ml-engineer/changes",
+      "value": "- Updated container definitions in libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto, and Dockerfile.intel_auto to refine CPU/Intel deployment environments.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate Optimum-related features.\n- Refined core embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, likely affecting how transformer embedders are instantiated or invoked.\n- Updated Optimum-based embedder implementation and utilities in libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and transformer/utils_optimum.py, potentially impacting model loading and runtime configuration.\n- Extended or revised unit coverage in libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py to va"
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ml-engineer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ml-engineer/overview",
+      "value": "This component provides embedding functionality (Python) for downstream ML systems, likely exposed as part of an \"ML System Card (GitHub-native, PR-first)\" ⚠️ at $.meta.title. It targets roles such as ML Engineers and related technical users ⚠️ at $.business.userPopulations. The library integrates transformer-based embedders (via Optimum) and supports multiple CPU-oriented container builds, making it suitable for inference services that need reproducible, containerized deployments. Provenance for this run is tracked in the System Card changelog ⚠️ at $.provenance.changelog[1]."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/product-manager/changes",
+      "value": "- No direct changes detected to `$.business.userPopulations`; existing user groups (including Product Manager) remain as documented⚠️.\n- Infrastructure updates to Docker templates and CPU/Intel-specific Dockerfiles for `infinity_emb` may affect deployment and operational characteristics, but not declared user populations.\n- Internal library updates (optional imports, Optimum-based embedder utilities, and tests) refine how transformer embeddings are implemented and validated, without altering the System Card’s business-facing fields.\n- No new or removed System Card fields identified as part of this run; monitoring continues for future schema or policy-impacting changes."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/product-manager/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/product-manager/overview",
+      "value": "This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer-based models through Optimum for efficient, production-grade inference. It is intended for teams building features that rely on semantic search, recommendations, or similarity matching, and needs to balance model performance with deployment constraints (CPU variants, vendor-specific optimizations). Product Managers⚠️ are one of the documented user groups for this system in `$.business.userPopulations`, alongside other technical and governance stakeholders⚠️."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/project-manager/changes",
+      "value": "- Updated container configurations (libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto, Dockerfile.intel_auto) to refine CPU/Intel auto-build deployment paths.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate features on installed libraries.\n- Modified core embedding primitives in primitives.py to integrate with revised Optimum-based transformers.\n- Updated Optimum embedder implementation and utilities (transformer/embedder/optimum.py, transformer/utils_optimum.py) to improve runtime or compatibility.\n- Expanded/updated unit tests in tests/unit_test/transformer/embedder/test_optimum.py to validate the new Optimum behavior and guard regressions."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/project-manager/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/project-manager/overview",
+      "value": "This component provides text embedding capabilities for downstream ML features, mainly serving technical users such as Data Scientists and ML Engineers described in $.business.userPopulations ⚠️. It packages transformer-based embedders (including Optimum-backed models) plus Dockerized runtimes for deployment in CPU-oriented environments. The library’s responsibilities include managing optional model dependencies, exposing a stable embedding interface, and ensuring test coverage so embedding behavior remains consistent across hardware targets and container builds used by product teams."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/software-developer/changes",
+      "value": "- Docker configuration updated for `cpu_auto` and `intel_auto` builds (`libs/infinity_emb/Docker.template.yaml`, related Dockerfiles), which may affect build/runtime environments ⚠️.\n- Optional import behavior adjusted in `infinity_emb/_optional_imports.py`, potentially changing how missing ML dependencies are handled ⚠️.\n- Core primitives in `infinity_emb/primitives.py` modified, which may impact embedding APIs or behaviors ⚠️.\n- Optimum transformer embedder and utilities updated (`transformer/embedder/optimum.py`, `transformer/utils_optimum.py`), possibly altering model loading or inference paths ⚠️.\n- Unit tests for the Optimum embedder revised (`tests/unit_test/transformer/embedder/test_optimum.py`), reflecting the above implementation changes."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/software-developer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/software-developer/overview",
+      "value": "This component provides embedding functionality for transformer models in the `infinity_emb` library, targeting programmatic use by technical users. Based on the system card, primary intended users likely include Data Scientists, ML Engineers, Product Managers, and Governance/Compliance roles ⚠️ as indicated in `$.business.userPopulations`. The code integrates with Optimum-based transformer backends, offers optional dependency handling, and exposes primitives suitable for embedding workflows within Python applications and containerized deployments."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ux-researcher/changes",
+      "value": "- Updated transformer/Optimum-based embedder implementation, which may affect latency, memory use, and failure modes when generating embeddings.\n- Adjusted optional import handling in `infinity_emb/_optional_imports.py`, changing how missing ML dependencies degrade or surface errors.\n- Revised utility functions in `transformer/utils_optimum.py`, potentially impacting supported hardware backends and performance characteristics.\n- Modified Docker templates and Intel/CPU-specific Dockerfiles, which influence deployment environments and thus runtime UX (e.g., cold starts, consistency across hosts).\n- Expanded or updated unit tests for the Optimum embedder to better capture regression and compatibility issues that could indirectly affect UX through stability and reliability."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ux-researcher/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ux-researcher/overview",
+      "value": "This component provides text embedding capabilities used by downstream applications for search, retrieval, and semantic analysis. It wraps transformer models behind a Python API, handling model loading, preprocessing, and vector generation so that product features can consume embeddings without managing ML details. For UX research, this primarily affects how reliably and quickly user text inputs are transformed into vectors that power relevance, recommendations, and content understanding. Primary documented user groups are technical roles (see $.business.userPopulations⚠️), not end-users directly."
+    }
+  ],
+  "card_patch": [
+    {
+      "op": "add",
+      "path": "/provenance/changelog/-",
+      "value": {
+        "date": "2026-02-27T14:44:08.469Z",
+        "summary": "ML System Card run run-2026-02-27-14-42-59 observed 8 changed files",
+        "files": [
+          {
+            "path": "libs/infinity_emb/Docker.template.yaml"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.cpu_auto"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.intel_auto"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/_optional_imports.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/primitives.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py"
+          }
+        ],
+        "runId": "run-2026-02-27-14-42-59",
+        "headSha": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-engineer/changes",
+      "value": "- Updated container build configuration for embeddings in libs/infinity_emb/Docker.template.yaml and CPU/Intel auto Dockerfiles, likely affecting how embedding services are packaged and deployed.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py, which may change when extra libraries (e.g., Optimum) are required vs. optional.\n- Modified embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, potentially impacting the public embedding API or behavior.\n- Updated Optimum-based embedder implementation and utilities in libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and .../utils_optimum.py, which may affect supported model types or runtime performance.\n- Extended or revised unit tests in libs/infinity_emb/tests/unit_test"
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-engineer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-engineer/overview",
+      "value": "This component provides transformer-based text embedding capabilities (e.g., via Optimum-backed models) that can be containerized and deployed through the project’s Docker images. It is primarily consumed by programmatic clients (Python) that need efficient embedding generation for downstream ML workflows, such as retrieval and similarity search. Relevant stakeholder groups appear to be captured under $.business.userPopulations ⚠️, with the overall card identified by $.meta.title ⚠️. Operational and review history is tracked in $.provenance.changelog[1] ⚠️."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-scientist/changes",
+      "value": "- Updated Docker templates and CPU/Intel Dockerfiles to refine runtime environments for embedding workloads.\n- Adjusted `_optional_imports.py` to handle Optimum-related imports more defensively, improving robustness when optional dependencies are absent.\n- Modified `primitives.py` and `transformer/embedder/optimum.py` to refine the Optimum-based embedder interface and internal behavior.\n- Updated `transformer/utils_optimum.py` to improve utility functions around Optimum model handling (e.g., device or dtype management).\n- Extended and/or updated unit tests in `tests/unit_test/transformer/embedder/test_optimum.py` to validate the revised Optimum integration and prevent regressions."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-scientist/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/data-scientist/overview",
+      "value": "This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer models (through Optimum) for efficient embedding generation in Python workflows. It is intended for model development, evaluation, and deployment pipelines where vector representations are required for search, retrieval, and downstream ML tasks. Primary users likely include Data Scientists (see $.business.userPopulations) ⚠️, who rely on consistent inference behavior, reproducible environments (Docker-based), and tested utilities for model loading, batching, and hardware-specific optimizations."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/domain-expert/changes",
+      "value": "- No significant updates detected to documented user populations in $.business.userPopulations for this run (⚠️).\n- Recent repository changes (e.g., Docker templates, optional imports, Optimum-based embedders, and related tests) primarily affect implementation and infrastructure, not the declared business user populations.\n- If future iterations introduce new user roles (e.g., additional governance, support, or operations personas), these should be reflected explicitly under $.business.userPopulations to keep stakeholder-scoped responsibilities and access expectations accurate."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/domain-expert/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/domain-expert/overview",
+      "value": "This ML system is documented as serving multiple technical and oversight roles in the organization. According to $.business.userPopulations⚠️, the intended users likely include data-centric practitioners (e.g., Data Scientists, ML Engineers) and product-oriented stakeholders (e.g., Product Managers), as well as governance and compliance roles. These groups rely on the system card to understand capability boundaries, integration expectations, and risk considerations for embedding and transformer-based components, particularly around how the model is deployed in production workflows and how responsibilities are distributed across technical and non-technical teams."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-compliance-ethics-officer/changes",
+      "value": "- New provenance entry added at $.provenance.changelog[1], recording this run (ID: run-2026-02-27-14-42-59) and its timestamp.\n- The summary in $.provenance.changelog[1].summary documents that an automated ML System Card run was executed for this update.\n- No additional structured fields (e.g., risk, evaluation, or mitigation sections) are confirmed as changed in this diff ⚠️.\n- From a governance/compliance perspective, this update primarily improves traceability by extending the change history, rather than altering declared behaviors or risks of the ML system ⚠️."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-compliance-ethics-officer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-compliance-ethics-officer/overview",
+      "value": "This ML System Card (⚠️ $.meta.title) documents an embedding component used within the repository’s Python-based stack. It is intended to support oversight by technical and non-technical stakeholders, including ⚠️ Governance, Compliance & Ethics Officers listed in $.business.userPopulations. For this audience, the card should help assess how the embedding system is governed, how changes are tracked over time, and how documentation can be aligned with internal policies on compliance, ethics, and model risk management."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-officer/changes",
+      "value": "- Updated Docker templates and CPU/Intel auto Dockerfiles (`libs/infinity_emb/Docker.template.yaml`, `Dockerfile.cpu_auto`, `Dockerfile.intel_auto`), affecting deployable runtime images.\n- Adjusted optional import handling in `infinity_emb/_optional_imports.py`, which may change how extra dependencies (e.g., Optimum) are conditionally loaded.\n- Modified core primitives in `infinity_emb/primitives.py`, potentially impacting how embedding requests are processed.\n- Updated Optimum-based transformer embedder implementation and utilities (`transformer/embedder/optimum.py`, `transformer/utils_optimum.py`), which may alter model loading or inference behavior.\n- Expanded or revised unit tests for the Optimum embedder (`tests/unit_test/transformer/embedder/test_optimum.py`), strengthening regressio"
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-officer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/governance-officer/overview",
+      "value": "This update concerns the embedding component in `libs/infinity_emb`, which underpins text representation for downstream ML workflows used by Data Scientists (⚠️ from `$.business.userPopulations`). The system is documented in an ML System Card titled ⚠️“ML System Card (GitHub-native, PR-first)” (`$.meta.title`). Governance relevance centers on how model embeddings are produced, the runtime/container environments allowed in production, and test coverage guarding regressions. The new System Card provenance entry (⚠️ `$.provenance.changelog[1]`) logs this run for traceability and aligns changes with specific SHAs for auditable evolution of the embedding stack."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ml-engineer/changes",
+      "value": "- Updated container definitions in libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto, and Dockerfile.intel_auto to refine CPU/Intel deployment environments.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate Optimum-related features.\n- Refined core embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, likely affecting how transformer embedders are instantiated or invoked.\n- Updated Optimum-based embedder implementation and utilities in libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and transformer/utils_optimum.py, potentially impacting model loading and runtime configuration.\n- Extended or revised unit coverage in libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py to va"
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ml-engineer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ml-engineer/overview",
+      "value": "This component provides embedding functionality (Python) for downstream ML systems, likely exposed as part of an \"ML System Card (GitHub-native, PR-first)\" ⚠️ at $.meta.title. It targets roles such as ML Engineers and related technical users ⚠️ at $.business.userPopulations. The library integrates transformer-based embedders (via Optimum) and supports multiple CPU-oriented container builds, making it suitable for inference services that need reproducible, containerized deployments. Provenance for this run is tracked in the System Card changelog ⚠️ at $.provenance.changelog[1]."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/product-manager/changes",
+      "value": "- No direct changes detected to `$.business.userPopulations`; existing user groups (including Product Manager) remain as documented⚠️.\n- Infrastructure updates to Docker templates and CPU/Intel-specific Dockerfiles for `infinity_emb` may affect deployment and operational characteristics, but not declared user populations.\n- Internal library updates (optional imports, Optimum-based embedder utilities, and tests) refine how transformer embeddings are implemented and validated, without altering the System Card’s business-facing fields.\n- No new or removed System Card fields identified as part of this run; monitoring continues for future schema or policy-impacting changes."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/product-manager/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/product-manager/overview",
+      "value": "This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer-based models through Optimum for efficient, production-grade inference. It is intended for teams building features that rely on semantic search, recommendations, or similarity matching, and needs to balance model performance with deployment constraints (CPU variants, vendor-specific optimizations). Product Managers⚠️ are one of the documented user groups for this system in `$.business.userPopulations`, alongside other technical and governance stakeholders⚠️."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/project-manager/changes",
+      "value": "- Updated container configurations (libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto, Dockerfile.intel_auto) to refine CPU/Intel auto-build deployment paths.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate features on installed libraries.\n- Modified core embedding primitives in primitives.py to integrate with revised Optimum-based transformers.\n- Updated Optimum embedder implementation and utilities (transformer/embedder/optimum.py, transformer/utils_optimum.py) to improve runtime or compatibility.\n- Expanded/updated unit tests in tests/unit_test/transformer/embedder/test_optimum.py to validate the new Optimum behavior and guard regressions."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/project-manager/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/project-manager/overview",
+      "value": "This component provides text embedding capabilities for downstream ML features, mainly serving technical users such as Data Scientists and ML Engineers described in $.business.userPopulations ⚠️. It packages transformer-based embedders (including Optimum-backed models) plus Dockerized runtimes for deployment in CPU-oriented environments. The library’s responsibilities include managing optional model dependencies, exposing a stable embedding interface, and ensuring test coverage so embedding behavior remains consistent across hardware targets and container builds used by product teams."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/software-developer/changes",
+      "value": "- Docker configuration updated for `cpu_auto` and `intel_auto` builds (`libs/infinity_emb/Docker.template.yaml`, related Dockerfiles), which may affect build/runtime environments ⚠️.\n- Optional import behavior adjusted in `infinity_emb/_optional_imports.py`, potentially changing how missing ML dependencies are handled ⚠️.\n- Core primitives in `infinity_emb/primitives.py` modified, which may impact embedding APIs or behaviors ⚠️.\n- Optimum transformer embedder and utilities updated (`transformer/embedder/optimum.py`, `transformer/utils_optimum.py`), possibly altering model loading or inference paths ⚠️.\n- Unit tests for the Optimum embedder revised (`tests/unit_test/transformer/embedder/test_optimum.py`), reflecting the above implementation changes."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/software-developer/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/software-developer/overview",
+      "value": "This component provides embedding functionality for transformer models in the `infinity_emb` library, targeting programmatic use by technical users. Based on the system card, primary intended users likely include Data Scientists, ML Engineers, Product Managers, and Governance/Compliance roles ⚠️ as indicated in `$.business.userPopulations`. The code integrates with Optimum-based transformer backends, offers optional dependency handling, and exposes primitives suitable for embedding workflows within Python applications and containerized deployments."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ux-researcher/changes",
+      "value": "- Updated transformer/Optimum-based embedder implementation, which may affect latency, memory use, and failure modes when generating embeddings.\n- Adjusted optional import handling in `infinity_emb/_optional_imports.py`, changing how missing ML dependencies degrade or surface errors.\n- Revised utility functions in `transformer/utils_optimum.py`, potentially impacting supported hardware backends and performance characteristics.\n- Modified Docker templates and Intel/CPU-specific Dockerfiles, which influence deployment environments and thus runtime UX (e.g., cold starts, consistency across hosts).\n- Expanded or updated unit tests for the Optimum embedder to better capture regression and compatibility issues that could indirectly affect UX through stability and reliability."
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ux-researcher/confidence",
+      "value": 0.1
+    },
+    {
+      "op": "replace",
+      "path": "/stakeholderNotes/ux-researcher/overview",
+      "value": "This component provides text embedding capabilities used by downstream applications for search, retrieval, and semantic analysis. It wraps transformer models behind a Python API, handling model loading, preprocessing, and vector generation so that product features can consume embeddings without managing ML details. For UX research, this primarily affects how reliably and quickly user text inputs are transformed into vectors that power relevance, recommendations, and content understanding. Primary documented user groups are technical roles (see $.business.userPopulations⚠️), not end-users directly."
+    }
+  ],
+  "notes": {
+    "data-engineer": {
+      "textMd": "",
+      "overview": "This component provides transformer-based text embedding capabilities (e.g., via Optimum-backed models) that can be containerized and deployed through the project’s Docker images. It is primarily consumed by programmatic clients (Python) that need efficient embedding generation for downstream ML workflows, such as retrieval and similarity search. Relevant stakeholder groups appear to be captured under $.business.userPopulations ⚠️, with the overall card identified by $.meta.title ⚠️. Operational and review history is tracked in $.provenance.changelog[1] ⚠️.",
+      "changes": "- Updated container build configuration for embeddings in libs/infinity_emb/Docker.template.yaml and CPU/Intel auto Dockerfiles, likely affecting how embedding services are packaged and deployed.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py, which may change when extra libraries (e.g., Optimum) are required vs. optional.\n- Modified embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, potentially impacting the public embedding API or behavior.\n- Updated Optimum-based embedder implementation and utilities in libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and .../utils_optimum.py, which may affect supported model types or runtime performance.\n- Extended or revised unit tests in libs/infinity_emb/tests/unit_test",
+      "confidence": 0.1
+    },
+    "data-scientist": {
+      "textMd": "",
+      "overview": "This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer models (through Optimum) for efficient embedding generation in Python workflows. It is intended for model development, evaluation, and deployment pipelines where vector representations are required for search, retrieval, and downstream ML tasks. Primary users likely include Data Scientists (see $.business.userPopulations) ⚠️, who rely on consistent inference behavior, reproducible environments (Docker-based), and tested utilities for model loading, batching, and hardware-specific optimizations.",
+      "changes": "- Updated Docker templates and CPU/Intel Dockerfiles to refine runtime environments for embedding workloads.\n- Adjusted `_optional_imports.py` to handle Optimum-related imports more defensively, improving robustness when optional dependencies are absent.\n- Modified `primitives.py` and `transformer/embedder/optimum.py` to refine the Optimum-based embedder interface and internal behavior.\n- Updated `transformer/utils_optimum.py` to improve utility functions around Optimum model handling (e.g., device or dtype management).\n- Extended and/or updated unit tests in `tests/unit_test/transformer/embedder/test_optimum.py` to validate the revised Optimum integration and prevent regressions.",
+      "confidence": 0.1
+    },
+    "domain-expert": {
+      "textMd": "",
+      "overview": "This ML system is documented as serving multiple technical and oversight roles in the organization. According to $.business.userPopulations⚠️, the intended users likely include data-centric practitioners (e.g., Data Scientists, ML Engineers) and product-oriented stakeholders (e.g., Product Managers), as well as governance and compliance roles. These groups rely on the system card to understand capability boundaries, integration expectations, and risk considerations for embedding and transformer-based components, particularly around how the model is deployed in production workflows and how responsibilities are distributed across technical and non-technical teams.",
+      "changes": "- No significant updates detected to documented user populations in $.business.userPopulations for this run (⚠️).\n- Recent repository changes (e.g., Docker templates, optional imports, Optimum-based embedders, and related tests) primarily affect implementation and infrastructure, not the declared business user populations.\n- If future iterations introduce new user roles (e.g., additional governance, support, or operations personas), these should be reflected explicitly under $.business.userPopulations to keep stakeholder-scoped responsibilities and access expectations accurate.",
+      "confidence": 0.1
+    },
+    "governance-compliance-ethics-officer": {
+      "textMd": "",
+      "overview": "This ML System Card (⚠️ $.meta.title) documents an embedding component used within the repository’s Python-based stack. It is intended to support oversight by technical and non-technical stakeholders, including ⚠️ Governance, Compliance & Ethics Officers listed in $.business.userPopulations. For this audience, the card should help assess how the embedding system is governed, how changes are tracked over time, and how documentation can be aligned with internal policies on compliance, ethics, and model risk management.",
+      "changes": "- New provenance entry added at $.provenance.changelog[1], recording this run (ID: run-2026-02-27-14-42-59) and its timestamp.\n- The summary in $.provenance.changelog[1].summary documents that an automated ML System Card run was executed for this update.\n- No additional structured fields (e.g., risk, evaluation, or mitigation sections) are confirmed as changed in this diff ⚠️.\n- From a governance/compliance perspective, this update primarily improves traceability by extending the change history, rather than altering declared behaviors or risks of the ML system ⚠️.",
+      "confidence": 0.1
+    },
+    "governance-officer": {
+      "textMd": "",
+      "overview": "This update concerns the embedding component in `libs/infinity_emb`, which underpins text representation for downstream ML workflows used by Data Scientists (⚠️ from `$.business.userPopulations`). The system is documented in an ML System Card titled ⚠️“ML System Card (GitHub-native, PR-first)” (`$.meta.title`). Governance relevance centers on how model embeddings are produced, the runtime/container environments allowed in production, and test coverage guarding regressions. The new System Card provenance entry (⚠️ `$.provenance.changelog[1]`) logs this run for traceability and aligns changes with specific SHAs for auditable evolution of the embedding stack.",
+      "changes": "- Updated Docker templates and CPU/Intel auto Dockerfiles (`libs/infinity_emb/Docker.template.yaml`, `Dockerfile.cpu_auto`, `Dockerfile.intel_auto`), affecting deployable runtime images.\n- Adjusted optional import handling in `infinity_emb/_optional_imports.py`, which may change how extra dependencies (e.g., Optimum) are conditionally loaded.\n- Modified core primitives in `infinity_emb/primitives.py`, potentially impacting how embedding requests are processed.\n- Updated Optimum-based transformer embedder implementation and utilities (`transformer/embedder/optimum.py`, `transformer/utils_optimum.py`), which may alter model loading or inference behavior.\n- Expanded or revised unit tests for the Optimum embedder (`tests/unit_test/transformer/embedder/test_optimum.py`), strengthening regressio",
+      "confidence": 0.1
+    },
+    "ml-engineer": {
+      "textMd": "",
+      "overview": "This component provides embedding functionality (Python) for downstream ML systems, likely exposed as part of an \"ML System Card (GitHub-native, PR-first)\" ⚠️ at $.meta.title. It targets roles such as ML Engineers and related technical users ⚠️ at $.business.userPopulations. The library integrates transformer-based embedders (via Optimum) and supports multiple CPU-oriented container builds, making it suitable for inference services that need reproducible, containerized deployments. Provenance for this run is tracked in the System Card changelog ⚠️ at $.provenance.changelog[1].",
+      "changes": "- Updated container definitions in libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto, and Dockerfile.intel_auto to refine CPU/Intel deployment environments.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate Optimum-related features.\n- Refined core embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, likely affecting how transformer embedders are instantiated or invoked.\n- Updated Optimum-based embedder implementation and utilities in libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and transformer/utils_optimum.py, potentially impacting model loading and runtime configuration.\n- Extended or revised unit coverage in libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py to va",
+      "confidence": 0.1
+    },
+    "product-manager": {
+      "textMd": "",
+      "overview": "This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer-based models through Optimum for efficient, production-grade inference. It is intended for teams building features that rely on semantic search, recommendations, or similarity matching, and needs to balance model performance with deployment constraints (CPU variants, vendor-specific optimizations). Product Managers⚠️ are one of the documented user groups for this system in `$.business.userPopulations`, alongside other technical and governance stakeholders⚠️.",
+      "changes": "- No direct changes detected to `$.business.userPopulations`; existing user groups (including Product Manager) remain as documented⚠️.\n- Infrastructure updates to Docker templates and CPU/Intel-specific Dockerfiles for `infinity_emb` may affect deployment and operational characteristics, but not declared user populations.\n- Internal library updates (optional imports, Optimum-based embedder utilities, and tests) refine how transformer embeddings are implemented and validated, without altering the System Card’s business-facing fields.\n- No new or removed System Card fields identified as part of this run; monitoring continues for future schema or policy-impacting changes.",
+      "confidence": 0.1
+    },
+    "project-manager": {
+      "textMd": "",
+      "overview": "This component provides text embedding capabilities for downstream ML features, mainly serving technical users such as Data Scientists and ML Engineers described in $.business.userPopulations ⚠️. It packages transformer-based embedders (including Optimum-backed models) plus Dockerized runtimes for deployment in CPU-oriented environments. The library’s responsibilities include managing optional model dependencies, exposing a stable embedding interface, and ensuring test coverage so embedding behavior remains consistent across hardware targets and container builds used by product teams.",
+      "changes": "- Updated container configurations (libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto, Dockerfile.intel_auto) to refine CPU/Intel auto-build deployment paths.\n- Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate features on installed libraries.\n- Modified core embedding primitives in primitives.py to integrate with revised Optimum-based transformers.\n- Updated Optimum embedder implementation and utilities (transformer/embedder/optimum.py, transformer/utils_optimum.py) to improve runtime or compatibility.\n- Expanded/updated unit tests in tests/unit_test/transformer/embedder/test_optimum.py to validate the new Optimum behavior and guard regressions.",
+      "confidence": 0.1
+    },
+    "software-developer": {
+      "textMd": "",
+      "overview": "This component provides embedding functionality for transformer models in the `infinity_emb` library, targeting programmatic use by technical users. Based on the system card, primary intended users likely include Data Scientists, ML Engineers, Product Managers, and Governance/Compliance roles ⚠️ as indicated in `$.business.userPopulations`. The code integrates with Optimum-based transformer backends, offers optional dependency handling, and exposes primitives suitable for embedding workflows within Python applications and containerized deployments.",
+      "changes": "- Docker configuration updated for `cpu_auto` and `intel_auto` builds (`libs/infinity_emb/Docker.template.yaml`, related Dockerfiles), which may affect build/runtime environments ⚠️.\n- Optional import behavior adjusted in `infinity_emb/_optional_imports.py`, potentially changing how missing ML dependencies are handled ⚠️.\n- Core primitives in `infinity_emb/primitives.py` modified, which may impact embedding APIs or behaviors ⚠️.\n- Optimum transformer embedder and utilities updated (`transformer/embedder/optimum.py`, `transformer/utils_optimum.py`), possibly altering model loading or inference paths ⚠️.\n- Unit tests for the Optimum embedder revised (`tests/unit_test/transformer/embedder/test_optimum.py`), reflecting the above implementation changes.",
+      "confidence": 0.1
+    },
+    "ux-researcher": {
+      "textMd": "",
+      "overview": "This component provides text embedding capabilities used by downstream applications for search, retrieval, and semantic analysis. It wraps transformer models behind a Python API, handling model loading, preprocessing, and vector generation so that product features can consume embeddings without managing ML details. For UX research, this primarily affects how reliably and quickly user text inputs are transformed into vectors that power relevance, recommendations, and content understanding. Primary documented user groups are technical roles (see $.business.userPopulations⚠️), not end-users directly.",
+      "changes": "- Updated transformer/Optimum-based embedder implementation, which may affect latency, memory use, and failure modes when generating embeddings.\n- Adjusted optional import handling in `infinity_emb/_optional_imports.py`, changing how missing ML dependencies degrade or surface errors.\n- Revised utility functions in `transformer/utils_optimum.py`, potentially impacting supported hardware backends and performance characteristics.\n- Modified Docker templates and Intel/CPU-specific Dockerfiles, which influence deployment environments and thus runtime UX (e.g., cold starts, consistency across hosts).\n- Expanded or updated unit tests for the Optimum embedder to better capture regression and compatibility issues that could indirectly affect UX through stability and reliability.",
+      "confidence": 0.1
+    }
+  },
+  "diagnostics": {
+    "coverage_non_null": 1,
+    "low_confidence": [
+      {
+        "jsonPath": "$.provenance.changelog[1]",
+        "reason": "Review high-change volume"
+      }
+    ],
+    "warnings": []
+  },
+  "confidence_report": [
+    {
+      "jsonPath": "$.business.userPopulations",
+      "kind": "extracted",
+      "confidence": 0.1,
+      "gate": "Require",
+      "sources": [
+        "docs/stakeholders.yaml#L2"
+      ]
+    },
+    {
+      "jsonPath": "$.meta.title",
+      "kind": "extracted",
+      "confidence": 0.1,
+      "gate": "Require",
+      "sources": [
+        "README.md#L16"
+      ]
+    },
+    {
+      "jsonPath": "$.provenance.changelog[1]",
+      "kind": "extracted",
+      "confidence": 0.1,
+      "gate": "Require",
+      "sources": [
+        "libs/infinity_emb/Docker.template.yaml#L1",
+        "libs/infinity_emb/Dockerfile.cpu_auto#L1",
+        "libs/infinity_emb/Dockerfile.intel_auto#L1",
+        "libs/infinity_emb/infinity_emb/_optional_imports.py#L1",
+        "libs/infinity_emb/infinity_emb/primitives.py#L1",
+        "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py#L1",
+        "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py#L1",
+        "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py#L1"
+      ]
+    }
+  ],
+  "sources": [
+    "docs/stakeholders.yaml#L2",
+    "libs/infinity_emb/Docker.template.yaml#L1",
+    "libs/infinity_emb/Dockerfile.cpu_auto#L1",
+    "libs/infinity_emb/Dockerfile.intel_auto#L1",
+    "libs/infinity_emb/infinity_emb/_optional_imports.py#L1",
+    "libs/infinity_emb/infinity_emb/primitives.py#L1",
+    "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py#L1",
+    "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py#L1",
+    "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py#L1",
+    "README.md#L16"
+  ]
+}

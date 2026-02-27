@@ -1,0 +1,90 @@
+[
+  {
+    "jsonPath": "$.business.userPopulations",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/stakeholders.yaml",
+        "startLine": 2,
+        "endLine": 2,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "config"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.meta.title",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 16,
+        "endLine": 16,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.provenance.changelog[1]",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "libs/infinity_emb/Docker.template.yaml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      },
+      {
+        "path": "libs/infinity_emb/Dockerfile.cpu_auto",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      },
+      {
+        "path": "libs/infinity_emb/Dockerfile.intel_auto",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      },
+      {
+        "path": "libs/infinity_emb/infinity_emb/_optional_imports.py",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      },
+      {
+        "path": "libs/infinity_emb/infinity_emb/primitives.py",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      },
+      {
+        "path": "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      },
+      {
+        "path": "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      },
+      {
+        "path": "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+        "kind": "code"
+      }
+    ]
+  }
+]
