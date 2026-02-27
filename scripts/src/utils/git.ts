@@ -15,9 +15,14 @@ export async function diffNameOnly(base: string, head: string): Promise<string[]
 
 export async function diffShortStat(
   base: string,
-  head: string
+  head: string,
+  paths?: string[]
 ): Promise<{ files: number; insertions: number; deletions: number }> {
-  const { stdout } = await exec("git", ["diff", "--shortstat", `${base}..${head}`]);
+  const args = ["diff", "--shortstat", `${base}..${head}`];
+  if (paths && paths.length > 0) {
+    args.push("--", ...paths);
+  }
+  const { stdout } = await exec("git", args);
   const filesMatch = stdout.match(/(\d+)\s+files?\s+changed/);
   const insertionsMatch = stdout.match(/(\d+)\s+insertions?/);
   const deletionsMatch = stdout.match(/(\d+)\s+deletions?/);
