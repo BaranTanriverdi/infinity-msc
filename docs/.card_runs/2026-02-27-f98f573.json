@@ -1,0 +1,85 @@
+{
+  "engine": "ml-system-card-local",
+  "run_id": "run-2026-02-27-00-11-08",
+  "base_sha": "edd6b36655ccf807c263676a48d184656be1069d",
+  "changed_paths": [
+    "$.business.executiveSummary",
+    "$.business.intendedUse",
+    "$.business.useCase",
+    "$.business.userPopulations",
+    "$.devInsight.architecture.dataFlow",
+    "$.devInsight.architecture.depsSummary",
+    "$.devInsight.architecture.publicApis",
+    "$.devInsight.codeOverview.components",
+    "$.devInsight.codeOverview.entrypoints",
+    "$.devInsight.codeOverview.languages",
+    "$.governance.policies",
+    "$.integration.api",
+    "$.meta.links",
+    "$.meta.maturity",
+    "$.meta.owners",
+    "$.meta.tags",
+    "$.meta.title",
+    "$.mlCore.artifactURIs",
+    "$.mlCore.datasets",
+    "$.mlCore.failureModes",
+    "$.mlCore.problem",
+    "$.mlCore.training",
+    "$.provenance.changelog[0]"
+  ],
+  "low_confidence_rows_only": [
+    {
+      "path": "$.integration.errorModel",
+      "confidence": 0.3,
+      "sources": [
+        "libs/infinity_emb/infinity_emb/infinity_server.py#L120-L220",
+        "libs/infinity_emb/infinity_emb/fastapi_schemas/errors.py#L1-L80",
+        "libs/infinity_emb/infinity_emb/primitives.py#L246-L320",
+        "libs/infinity_emb/tests/end_to_end/test_torch_vision.py#L96-L176",
+        "libs/infinity_emb/tests/end_to_end/test_torch_audio.py#L96-L192",
+        "libs/infinity_emb/tests/end_to_end/test_authentication.py#L1-L80"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.integration.observability",
+      "confidence": 0.3,
+      "sources": [
+        "libs/infinity_emb/infinity_emb/infinity_server.py#L74-L120",
+        "libs/client_infinity/infinity_client/infinity_client/api/default/metrics_metrics_get.py#L1-L60",
+        "libs/infinity_emb/infinity_emb/log_handler.py#L1-L80",
+        "libs/infinity_emb/infinity_emb/telemetry.py#L1-L120"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.integration.operationalQualities",
+      "confidence": 0.2,
+      "sources": [
+        "libs/infinity_emb/infinity_emb/inference/batch_handler.py#L32-L120",
+        "libs/infinity_emb/infinity_emb/env.py#L120-L196",
+        "libs/infinity_emb/infinity_emb/cli.py#L190-L276",
+        "infra/modal/webserver.py#L1-L120",
+        "infra/vast/README.md#L1-L80",
+        "infra/aws_neuron/README.md#L1-L80"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.mlCore.qualities",
+      "confidence": 0,
+      "sources": [
+        "README.md#L28-L40",
+        "docs/benchmarks/simple_app.py#L1-L120",
+        "libs/infinity_emb/tests/unit_test/inference/test_batch_handler.py#L1-L120",
+        "libs/infinity_emb/tests/unit_test/transformer/embedder/test_torch.py#L1-L80",
+        "libs/infinity_emb/tests/unit_test/transformer/vision/test_torch_vision.py#L1-L120"
+      ],
+      "disposition": "rejected"
+    }
+  ],
+  "yaml_hash": "f98f573d2b469c4c85092cf341c3ca3531f5de165f9d9a5a5d0ffa3543674f42",
+  "schema_id": "https://ml-system-card.dev/schema/v1",
+  "coverage_non_null": 1,
+  "timestamp": "2026-02-27T01:14:39.563Z"
+}

@@ -1,49 +1,2589 @@
-$schema: ../lib/ml_system_card.schema.json
-meta:
-  title: New ML System Card
-  language: en
-  owners: []
-  tags: []
-  links: {}
-  createdAt: '2026-02-27T00:10:51.194Z'
-  lastUpdated: '2026-02-27T00:10:51.194Z'
+ai:
+  fieldMeta:
+    - confidence: 0.3
+      needs_review: false
+      path: $.business.executiveSummary
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 86
+          kind: docs
+          path: README.md
+          startLine: 14
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 18
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/docs.py
+          startLine: 5
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 60
+          kind: code
+          path: libs/infinity_emb/pyproject.toml
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.3
+      needs_review: false
+      path: $.business.intendedUse
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 41
+          kind: docs
+          path: README.md
+          startLine: 18
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 164
+          kind: docs
+          path: README.md
+          startLine: 88
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 20
+          kind: docs
+          path: infra/README.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.3
+      needs_review: false
+      path: $.business.useCase
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 176
+          kind: docs
+          path: README.md
+          startLine: 88
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 302
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 172
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_openapi_client_compat.py
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.2
+      needs_review: false
+      path: $.business.userPopulations
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 2
+          kind: config
+          path: docs/stakeholders.yaml
+          startLine: 2
+      source:
+        kind: extracted
+    - confidence: 0.2
+      needs_review: false
+      path: $.devInsight.architecture.dataFlow
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 382
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 74
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 196
+          kind: code
+          path: libs/infinity_emb/infinity_emb/engine.py
+          startLine: 17
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 295
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/batch_handler.py
+          startLine: 32
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_emb/inference/queue.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/utils.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/vision/utils.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/audio/utils.py
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.2
+      needs_review: false
+      path: $.devInsight.architecture.depsSummary
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/pyproject.toml
+          startLine: 15
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/utils_optimum.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/ct2.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/vision/torch_vision.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.devInsight.architecture.publicApis
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 384
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 96
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/health.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/models.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/rerank.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/classify.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings_image.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings_audio.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 60
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/metrics_metrics_get.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.devInsight.codeOverview.components
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: code
+          path: libs/infinity_emb/infinity_emb/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 220
+          kind: code
+          path: libs/infinity_emb/infinity_emb/cli.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 220
+          kind: code
+          path: libs/infinity_emb/infinity_emb/engine.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: docs
+          path: libs/client_infinity/infinity_client/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: docs
+          path: libs/embed_package/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 140
+          kind: code
+          path: libs/embed_package/embed/_infer.py
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.93
+      needs_review: false
+      path: $.devInsight.codeOverview.entrypoints
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 268
+          kind: code
+          path: libs/infinity_emb/infinity_emb/cli.py
+          startLine: 148
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 196
+          kind: code
+          path: libs/infinity_emb/infinity_emb/engine.py
+          startLine: 17
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 170
+          kind: code
+          path: libs/infinity_emb/infinity_emb/sync_engine.py
+          startLine: 77
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/embed_package/embed/_infer.py
+          startLine: 20
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 39
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/client.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.95
+      needs_review: false
+      path: $.devInsight.codeOverview.languages
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: code
+          path: libs/infinity_emb/pyproject.toml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 148
+          kind: docs
+          path: README.md
+          startLine: 112
+      source:
+        kind: inferred
+    - confidence: 0.2
+      needs_review: false
+      path: $.governance.policies
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: code
+          path: LICENSE
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 238
+          kind: docs
+          path: README.md
+          startLine: 196
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/env.py
+          startLine: 80
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/infinity_emb/infinity_emb/telemetry.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 276
+          kind: docs
+          path: README.md
+          startLine: 242
+      source:
+        kind: inferred
+    - confidence: 0.2
+      needs_review: false
+      path: $.integration.api
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: config
+          path: docs/assets/openapi.json
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 220
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/pymodels.py
+          startLine: 78
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 20
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/pyproject.toml
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.integration.errorModel
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 220
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 120
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/errors.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 320
+          kind: code
+          path: libs/infinity_emb/infinity_emb/primitives.py
+          startLine: 246
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 176
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_vision.py
+          startLine: 96
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 192
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_audio.py
+          startLine: 96
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_authentication.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.integration.observability
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 74
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 60
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/metrics_metrics_get.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/infinity_emb/infinity_emb/log_handler.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/telemetry.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.2
+      needs_review: false
+      path: $.integration.operationalQualities
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/batch_handler.py
+          startLine: 32
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 196
+          kind: code
+          path: libs/infinity_emb/infinity_emb/env.py
+          startLine: 120
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 276
+          kind: code
+          path: libs/infinity_emb/infinity_emb/cli.py
+          startLine: 190
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: infra/modal/webserver.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: docs
+          path: infra/vast/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: docs
+          path: infra/aws_neuron/README.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.4
+      needs_review: false
+      path: $.meta.links
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: docs
+          path: README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: docs
+          path: infra/modal/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 112
+          kind: code
+          path: libs/infinity_emb/infinity_emb/env.py
+          startLine: 96
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.meta.maturity
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 84
+          kind: docs
+          path: README.md
+          startLine: 42
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 236
+          kind: docs
+          path: README.md
+          startLine: 180
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 60
+          kind: config
+          path: .github/workflows/ci.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_sentence_transformers.py
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.3
+      needs_review: false
+      path: $.meta.owners
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 20
+          kind: code
+          path: CITATION.cff
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 20
+          kind: code
+          path: libs/infinity_emb/pyproject.toml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 26
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/docs.py
+          startLine: 19
+      source:
+        kind: extracted
+    - confidence: 0.88
+      needs_review: false
+      path: $.meta.tags
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 76
+          kind: docs
+          path: README.md
+          startLine: 14
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: code
+          path: libs/infinity_emb/pyproject.toml
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.1
+      needs_review: false
+      path: $.meta.title
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 16
+          kind: docs
+          path: README.md
+          startLine: 16
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.mlCore.artifactURIs
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: docs
+          path: README.md
+          startLine: 52
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 164
+          kind: docs
+          path: README.md
+          startLine: 112
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 24
+          kind: docs
+          path: infra/vast/README.md
+          startLine: 9
+      source:
+        kind: extracted
+    - confidence: 0.1
+      needs_review: false
+      path: $.mlCore.datasets
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 112
+          kind: code
+          path: libs/infinity_emb/infinity_emb/env.py
+          startLine: 88
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 10
+          kind: code
+          path: docs/assets/multilingual_calibration.utf8
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.2
+      needs_review: false
+      path: $.mlCore.failureModes
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 320
+          kind: code
+          path: libs/infinity_emb/infinity_emb/primitives.py
+          startLine: 246
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 240
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 120
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 96
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/vision/utils.py
+          startLine: 40
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 96
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/audio/utils.py
+          startLine: 40
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 196
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_vision.py
+          startLine: 120
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 220
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_audio.py
+          startLine: 128
+      source:
+        kind: extracted
+    - confidence: 0.4
+      needs_review: false
+      path: $.mlCore.problem
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 84
+          kind: docs
+          path: README.md
+          startLine: 14
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 176
+          kind: docs
+          path: README.md
+          startLine: 88
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 220
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/pymodels.py
+          startLine: 78
+      source:
+        kind: inferred
+    - confidence: 0
+      needs_review: false
+      path: $.mlCore.qualities
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: docs
+          path: README.md
+          startLine: 28
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: docs/benchmarks/simple_app.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/inference/test_batch_handler.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/embedder/test_torch.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 120
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/vision/test_torch_vision.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.4
+      needs_review: false
+      path: $.mlCore.training
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 80
+          kind: code
+          path: libs/infinity_emb/pyproject.toml
+          startLine: 15
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 38
+          kind: docs
+          path: README.md
+          startLine: 20
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 40
+          kind: docs
+          path: infra/aws_neuron/README.md
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0
+      needs_review: false
+      path: $.provenance.changelog[0]
+      repoSources:
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/bug-report.yml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/config.yml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/feature-request.yml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/new-model-addition.yml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .github/actions/disk_cleanup/action.yml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .github/actions/poetry_setup/action.yml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: .github/pull_request_template.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .github/tools/git-restore-mtime
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/ci.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/docs.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/generate_client.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/linting.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/pypi_release.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/release.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/release_docker_container.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/release_modal_com.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: .github/workflows/test.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .gitignore
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .gitmodules
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: .tool-versions
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: CITATION.cff
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: LICENSE
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/assets/cats_coco_sample.jpg
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/assets/create_cli_v2_docs.sh
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/assets/create_openapi_with_server_hook.sh
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/assets/multilingual_calibration.utf8
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: docs/assets/openapi.json
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/benchmarks/benchmarking.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/benchmarks/simple_app.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/demo_v0_0_1.gif
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/benchmarking.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/cli_v2.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/client_infinity.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/contribution.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/deploy.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/embed.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/index.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/integrations.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/python_engine.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/swagger_ui.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: docs/docs/telemetry.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/lm_head_to_classifier/convert_lm.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: docs/mkdocs.yml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: docs/ml_system_card.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: docs/stakeholders.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/aws_neuron/.dockerignore
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/aws_neuron/Dockerfile.neuron
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/aws_neuron/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/aws_neuron/requirements_no_gpu.txt
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/baseten/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/dstack/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/kubeai_k8s/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/modal/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/modal/functional.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/modal/webserver.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/runpod
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/sap/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/sap/sap-core-ai
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/skypilot/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: infra/skypilot/skypilot-infinity.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: infra/vast/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: infra/vast/vast_instance_view.png
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/Makefile
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: libs/client_infinity/client_config.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/.gitignore
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: libs/client_infinity/infinity_client/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/classify.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings_audio.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings_image.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/health.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/metrics_metrics_get.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/models.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/redirect_get.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/api/default/rerank.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/client.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/errors.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/audio_embedding_input.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/classify_input.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/classify_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/classify_result.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/classify_result_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/embedding_encoding_format.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/embedding_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/embedding_object_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/http_validation_error.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/image_embedding_input.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/model_info.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/model_info_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/model_info_owned_by.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_audio.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_audio_modality.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_image.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_image_modality.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_text.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_text_modality.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_result.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_result_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_model_info.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/re_rank_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/re_rank_result.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/re_rank_result_object.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/rerank_input.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/response_health.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/stats.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/usage.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/models/validation_error.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/py.typed
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/types.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/infinity_client/vision_client.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/poetry.lock
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/infinity_client/pyproject.toml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/run_generate_with_hook.sh
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/run_tests_with_hook.sh
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/template/README.md.jinja
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/template/pypproject.toml.jinja
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/template/vision_client.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/tests/conftest.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/client_infinity/tests/test_client.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/embed_package/Makefile
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: libs/embed_package/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/embed_package/embed/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/embed_package/embed/_infer.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/embed_package/embed/py.typed
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/embed_package/poetry.lock
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/embed_package/pyproject.toml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/embed_package/tests/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/.dockerignore
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: libs/infinity_emb/Docker.template.yaml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Dockerfile.amd_auto
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Dockerfile.cpu_auto
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Dockerfile.jinja2
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Dockerfile.nvidia_auto
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Dockerfile.trt_onnx_auto
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Makefile
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: docs
+          path: libs/infinity_emb/README.md
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/_optional_imports.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/args.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/cli.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/engine.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/env.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/data_uri.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/docs.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/errors.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/pydantic_v2.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/fastapi_schemas/pymodels.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/batch_handler.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/caching_layer.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/loading_strategy.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/queue.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/select_model.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/inference/threading_asyncio.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/infinity_server.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/log_handler.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/primitives.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/py.typed
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/sync_engine.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/telemetry.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/abstract.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/acceleration.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/audio/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/audio/torch.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/audio/utils.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/classifier/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/classifier/optimum.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/classifier/torch.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/crossencoder/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/crossencoder/optimum.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/crossencoder/torch.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/ct2.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/dummytransformer.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/neuron.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/sentence_transformer.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/quantization/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/quantization/interface.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/quantization/quant.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/utils.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/utils_optimum.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/vision/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/vision/torch_vision.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/vision/utils.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/poetry.lock
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/poetry.toml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/pyproject.toml
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/requirements_install_from_poetry.sh
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/conftest.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/data/audio/beep.wav
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/data/audio/cat_meow.wav
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: libs/infinity_emb/tests/data/benchmark/benchmark_embed.json
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: config
+          path: libs/infinity_emb/tests/data/benchmark/benchmark_embed_image.json
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/data/datasets/stsbenchmark.tsv.gz
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/__init__.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/conftest.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_api_with_dummymodel.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_authentication.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_ct2_sentence.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_openapi_client_compat.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_optimum_embedding.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_sentence_transformers.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_sentence_transformers_colbert.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_audio.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_classify.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_reranker.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/end_to_end/test_torch_vision.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/install_test.sh
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/script_live.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/fastapi_schemas/test_data_uri.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/fastapi_schemas/test_errors.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/fastapi_schemas/test_response.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/inference/test_batch_handler.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/inference/test_caching_layer.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/inference/test_models.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/inference/test_select_model.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/test_args.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/test_cli.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/test_engine.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/test_infinity_server.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/test_log_handler.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/test_sync_engine.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/audio/test_audio.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/classifier/test_optimum_classifier.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/classifier/test_torch_classifer.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/crossencoder/test_optimum_crossencoder.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/crossencoder/test_torch_crossencoder.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/embedder/test_torch.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/quantization/test_interface.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/test_utils.py
+          startLine: 1
+        - commit: edd6b36655ccf807c263676a48d184656be1069d
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/vision/test_torch_vision.py
+          startLine: 1
+      source:
+        kind: extracted
 business:
-  nonGoals: []
-  kpis: []
-  outOfScopeUse: []
-  userPopulations: []
+  executiveSummary: >-
+    Infinity is an open‑source, high‑throughput, low‑latency REST API server for serving text, image, and audio
+    embeddings, reranking models, and related classification tasks. It wraps a wide range of Hugging Face models and
+    backends (PyTorch, Optimum/ONNX Runtime, CTranslate2, AWS Neuron) behind an OpenAI‑compatible embeddings API and a
+    Cohere‑style rerank API. The system focuses on production‑grade serving features such as dynamic batching, support
+    for multiple accelerators (NVIDIA CUDA, AMD ROCm, CPU, AWS INF2, Apple MPS), and multimodal capabilities including
+    CLIP, CLAP, ColBERT, and ColPali. Infinity exposes both a FastAPI‑based HTTP server and Python/HTTP clients, and is
+    extensively unit‑ and end‑to‑end‑tested to ensure that outputs closely match reference implementations from
+    sentence‑transformers and other upstream models. It is distributed under the MIT License and is already integrated
+    with several deployment and orchestration platforms such as Modal, Runpod, Vast.ai, KubeAI, and Baseten.
   hazardousUseCases: []
+  intendedUse: >-
+    The intended use of Infinity is to provide developers and infrastructure teams with a self‑hosted, production‑ready
+    service for embedding, reranking, and related classification models, exposing them over stable HTTP APIs or a Python
+    interface. Typical downstream applications include retrieval‑augmented generation (RAG), semantic search,
+    recommendation systems, clustering, and multimodal search over text, images, and audio. Infinity is designed to be
+    dropped into existing stacks that expect OpenAI‑style embeddings or Cohere‑style rerank APIs, or to be orchestrated
+    as a microservice via platforms like Kubernetes, Modal, Runpod, or Vast.ai. It is not intended to train models from
+    scratch, but rather to host and optimize inference for pretrained models fetched from Hugging Face or local
+    directories.
+  kpis: []
+  nonGoals: []
+  outOfScopeUse: []
+  useCase: >-
+    Infinity is used to deploy and serve multiple embedding and reranking models as a single high‑performance service,
+    allowing applications to compute semantic vector representations for text, images, and audio, rerank document lists
+    given queries, and run multi‑label text classification. It targets scenarios where teams want to self‑host or
+    control their own embedding stack while keeping compatibility with popular APIs like OpenAI embeddings and Cohere
+    rerank, for example to reduce latency, control data residency, or switch between different Hugging Face models.
+    Common use cases include powering search indices and vector databases, document and code retrieval for LLMs,
+    semantic similarity and clustering pipelines, and multimodal search such as image‑by‑text or audio‑by‑text
+    retrieval.
+  userPopulations:
+    - Data Scientist
+    - ML Engineer
+    - Product Manager
+    - Governance, Compliance & Ethics Officer
+    - Data Engineer
+    - Software Developer
+    - UX Researcher
+    - Project Manager
+    - Domain Expert
 devInsight:
-  codeOverview:
-    languages: []
-    entrypoints: []
-    components: []
   architecture:
-    publicApis: []
-    dataFlow: []
-    depsSummary: []
+    dataFlow:
+      - >-
+        Client sends HTTP requests (e.g., POST /embeddings, /rerank, /classify) to the FastAPI application created by
+        infinity_emb.infinity_server.create_server, optionally including a Bearer API key when authentication is
+        enabled.
+      - >-
+        The FastAPI route handler (e.g., _embeddings, _rerank, _classify) validates and parses the request body into
+        Pydantic models (MultiModalOpenAIEmbedding, RerankInput, ClassifyInput), including modality routing for text,
+        image, or audio inputs and optional matryoshka dimension truncation.
+      - >-
+        The handler resolves the target model by name via _resolve_engine, which selects an AsyncEmbeddingEngine
+        instance from an AsyncEngineArray; if the engine's internal BatchHandler queue is overloaded, it raises a 429
+        OpenAI‑style error before queuing more work.
+      - >-
+        AsyncEmbeddingEngine delegates work to BatchHandler, which places inputs into a prioritized queue
+        (CustomFIFOQueue) where priorities are computed from token lengths (get_lengths_with_tokenize, optionally using
+        model‑specific tokenizers) to build dynamically sized batches up to a configured max_batch_size and queue_size.
+      - >-
+        ModelWorker threads perform a three‑stage pipeline around each batch: encode_pre (tokenization / feature
+        extraction and device transfer), encode_core (forward pass via backend‑specific encoder such as
+        SentenceTransformerPatched, OptimumEmbedder, CrossEncoder, TIMM, or TorchAudioModel), and encode_post (pooling,
+        normalization, and optional post‑forward quantization via quant_embedding_decorator).
+      - >-
+        For image and audio modalities, helper functions resolve_images and resolve_audios download URLs with aiohttp,
+        decode base64 data URIs, validate size or sampling rate, and wrap them as ImageSingle or AudioSingle objects
+        before scheduling through the same batching pipeline.
+      - >-
+        BatchHandler collects results from model workers, optionally applies matryoshka_dim slicing of embeddings, and
+        returns embeddings, scores, or classification outputs plus token usage counts to AsyncEmbeddingEngine, which
+        passes them back to the FastAPI route.
+      - >-
+        Route handlers format outputs into OpenAI‑style or Cohere‑style JSON envelopes (OpenAIEmbeddingResult,
+        ReRankResult, ClassifyResult), add usage metadata, and send them over HTTP; in parallel, optional diskcache
+        caching and anonymous PostHog telemetry may run asynchronously in the background.
+    depsSummary:
+      - FastAPI and Uvicorn provide the HTTP server, routing, and OpenAPI documentation for Infinity's REST API.
+      - >-
+        Hugging Face Transformers, sentence-transformers, and huggingface_hub are used to load and run text, image, and
+        audio models from the Hugging Face Hub or local directories.
+      - >-
+        PyTorch is the primary deep learning backend for 'torch' engine models, with optional acceleration via
+        BetterTransformer and torch.compile.
+      - >-
+        Optimum and onnxruntime (including CUDA, TensorRT, ROCm, and OpenVINO providers) are used for optimized
+        ONNX‑based inference when the 'optimum' engine is selected.
+      - >-
+        CTranslate2 provides an alternative quantized CPU/GPU backend for some BERT‑style embedding models when the
+        'ctranslate2' engine is chosen.
+      - >-
+        colpali-engine and timm are used for visual and ColPali/ColQwen2‑style late‑interaction image–text models;
+        soundfile and related libraries are used for CLAP‑style audio models.
+      - >-
+        diskcache optionally stores embedding results on disk to reduce latency on repeated queries;
+        prometheus-fastapi-instrumentator exposes Prometheus /metrics; posthog is used for anonymized telemetry; rich
+        provides structured logging.
+    publicApis:
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: Health check
+        path: /health
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: List models
+        path: /models
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: Embeddings (multimodal, OpenAI‑compatible)
+        path: /embeddings
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: Rerank (Cohere‑style)
+        path: /rerank
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: Classify (text classification)
+        path: /classify
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: Image embeddings (legacy)
+        path: /embeddings_image
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: Audio embeddings (legacy)
+        path: /embeddings_audio
+      - file: libs/infinity_emb/infinity_emb/infinity_server.py
+        name: Prometheus metrics
+        path: /metrics
+  codeOverview:
+    components:
+      - keyFiles:
+          - libs/infinity_emb/infinity_emb/cli.py
+          - libs/infinity_emb/infinity_emb/infinity_server.py
+          - libs/infinity_emb/infinity_emb/engine.py
+          - libs/infinity_emb/infinity_emb/inference/batch_handler.py
+          - libs/infinity_emb/infinity_emb/inference/select_model.py
+          - libs/infinity_emb/infinity_emb/transformer/
+        name: Infinity core server and engine
+        summary: >-
+          Implements the CLI, FastAPI server creation, async and sync embedding engines, batching, model selection, and
+          transformer backends for text, image, audio, reranking, and classification.
+      - keyFiles:
+          - libs/client_infinity/infinity_client/README.md
+          - libs/client_infinity/infinity_client/infinity_client/client.py
+          - libs/client_infinity/infinity_client/infinity_client/api/default/
+        name: Infinity REST API client
+        summary: >-
+          A generated HTTP client library (sync and async) that wraps Infinity's OpenAPI specification, providing typed
+          methods for /embeddings, /rerank, /classify, /models, /health, and /metrics.
+      - keyFiles:
+          - libs/embed_package/README.md
+          - libs/embed_package/embed/_infer.py
+          - libs/embed_package/pyproject.toml
+        name: Embed convenience library
+        summary: >-
+          A high‑level sync‑to‑async wrapper (embed package) that uses SyncEngineArray and EngineArgs to batch and
+          schedule inference calls across one or more models, exposing simple embed, rerank, classify, image_embed, and
+          audio_embed methods returning futures.
+    entrypoints:
+      - >-
+        CLI entrypoint 'infinity_emb' with subcommand 'v2' for launching one or more models as an HTTP server (defined
+        in libs/infinity_emb/infinity_emb/cli.py).
+      - >-
+        Python API entrypoints AsyncEmbeddingEngine and AsyncEngineArray for direct async inference over text, image,
+        and audio (libs/infinity_emb/infinity_emb/engine.py).
+      - >-
+        SyncEngineArray and embed.BatchedInference for synchronous, batched embedding and reranking from Python code
+        (libs/infinity_emb/infinity_emb/sync_engine.py, libs/embed_package/embed/_infer.py).
+      - >-
+        FastAPI application factory create_server for embedding, rerank, classify, and health/metrics endpoints
+        (libs/infinity_emb/infinity_emb/infinity_server.py).
+      - >-
+        Generated HTTP clients Client and AuthenticatedClient in the infinity_client package for remote access to an
+        Infinity deployment (libs/client_infinity/infinity_client/infinity_client/client.py).
+    languages:
+      - Python
   qualitySignals:
     complexityHints: []
     todoHotspots: []
   runtimePerf: {}
-mlCore:
-  problem: null
-  datasets: []
-  features: []
-  baselines: []
-  qualities: []
-  failureModes: []
-integration:
-  errorModel: []
-  operationalQualities: []
-  fallbacks: []
-  observability: []
-  driftSignals: []
 governance:
-  policies: []
   assessments: []
+  policies:
+    - Infinity is distributed under the MIT License, and all contributions must be compatible with this license.
+    - >-
+      The project collects anonymized usage telemetry via PostHog by default, but this can be disabled by setting
+      environment variables such as DO_NOT_TRACK=1 or INFINITY_ANONYMOUS_USAGE_STATS=0.
+    - >-
+      Pull requests are expected to follow the documented contribution guidelines, pass the precommit and CI test
+      suites, and respect the open‑source licensing of upstream models loaded from Hugging Face.
   riskRegister: []
   signOffs: []
+integration:
+  api:
+    inputSchema: >-
+      OpenAPI 3.0 specification defining OpenAI‑style /embeddings and Cohere‑style /rerank endpoints, plus /classify,
+      /models, /health, and /metrics, stored in docs/assets/openapi.json.
+    outputSchema: >-
+      JSON responses that follow OpenAI embeddings result envelopes, Cohere rerank result structures, and classification
+      result objects, as implemented by OpenAIEmbeddingResult, ReRankResult, and ClassifyResult Pydantic models.
+    version: 0.0.77
+  driftSignals: []
+  errorModel: []
+  fallbacks: []
+  observability: []
+  operationalQualities: []
+meta:
+  createdAt: '2026-02-27T00:10:51.194Z'
+  language: en
+  lastUpdated: '2026-02-27T00:10:51.194Z'
+  links:
+    dataset: >-
+      https://raw.githubusercontent.com/michaelfeil/infinity/2da1f32d610b8edbe4ce58d0c44fc27c963abca6/docs/assets/multilingual_calibration.utf8
+    demo: https://infinity.modal.michaelfeil.eu
+    repo: https://github.com/michaelfeil/infinity
+  maturity: Production
+  owners:
+    - name: Michael Feil
+      role: maintainer
+    - name: Raphael Wirth
+      role: maintainer
+  tags:
+    - embeddings
+    - reranking
+    - multimodal
+    - REST-API
+    - HuggingFace
+    - FastAPI
+    - OpenAI-compatible
+    - CTranslate2
+    - ONNXRuntime
+    - PyTorch
+  title: ML System Card (GitHub-native, PR-first)
+mlCore:
+  artifactURIs:
+    dockerImage: docker.io/michaelf34/infinity:latest
+    model: >-
+      Model artifacts are referenced by Hugging Face model IDs or local directories configured at runtime, for example
+      'BAAI/bge-small-en-v1.5', 'mixedbread-ai/mxbai-rerank-xsmall-v1', or 'wkcn/TinyCLIP-ViT-8M-16-Text-3M-YFCC15M'.
+  baselines: []
+  datasets:
+    - license: Not specified
+      name: multilingual_calibration.utf8
+      uri: >-
+        https://raw.githubusercontent.com/michaelfeil/infinity/2da1f32d610b8edbe4ce58d0c44fc27c963abca6/docs/assets/multilingual_calibration.utf8
+  failureModes:
+    - >-
+      Requests that reference unsupported capabilities for a given model (e.g., calling /rerank on a pure embedding
+      model or /classify on a reranker) raise ModelNotDeployedError and are returned as HTTP 400 errors with an
+      OpenAI‑style error JSON.
+    - >-
+      If an image is too small (e.g., 1×1), corrupted, or cannot be downloaded, resolve_images raises ImageCorruption,
+      and the /embeddings or /embeddings_image route returns HTTP 400 with a descriptive error message.
+    - '0400-12-01T00:00:00.000Z'
+    - >-
+      When a model's request queue exceeds the configured queue_size, AsyncEmbeddingEngine.is_overloaded() returns true
+      and _resolve_engine rejects further requests with HTTP 429 Too Many Requests.
+    - >-
+      Authentication failures (missing or wrong Bearer token when INFINITY_API_KEY is set) result in HTTP 401 responses;
+      unexpected server errors in encode or batching logic are caught and surfaced as generic HTTP 500 Internal Server
+      Error responses.
+  features: []
+  problem: >-
+    Infinity serves pretrained models for semantic representation learning and retrieval tasks, including text, image,
+    and audio embeddings, late‑interaction ColBERT/ColPali embeddings, query–document reranking, and multi‑label text
+    classification, in an inference‑only setting.
+  qualities: []
+  training:
+    framework: PyTorch, Hugging Face Transformers, sentence-transformers, Optimum/ONNX Runtime, CTranslate2
+    frameworkVersion: >-
+      Versions are controlled by the infinity_emb package dependencies (e.g., torch>=2.2.1, transformers>=4.47.0,
+      optimum>=1.24.0, sentence-transformers^3.0.1).
+    hardware: >-
+      Designed for inference on CPU, NVIDIA CUDA GPUs, AMD ROCm GPUs, AWS Neuron (INF2), and Apple MPS accelerators; no
+      model training is performed within this repository.
+    hyperparams: {}
 provenance:
-  changelog: []
-ai: {}
+  changelog:
+    - date: '2026-02-27T00:11:32.311Z'
+      files:
+        - path: .github/ISSUE_TEMPLATE/bug-report.yml
+        - path: .github/ISSUE_TEMPLATE/config.yml
+        - path: .github/ISSUE_TEMPLATE/feature-request.yml
+        - path: .github/ISSUE_TEMPLATE/new-model-addition.yml
+        - path: .github/actions/disk_cleanup/action.yml
+        - path: .github/actions/poetry_setup/action.yml
+        - path: .github/pull_request_template.md
+        - path: .github/tools/git-restore-mtime
+        - path: .github/workflows/ci.yaml
+        - path: .github/workflows/docs.yaml
+        - path: .github/workflows/generate_client.yaml
+        - path: .github/workflows/linting.yaml
+        - path: .github/workflows/pypi_release.yaml
+        - path: .github/workflows/release.yaml
+        - path: .github/workflows/release_docker_container.yaml
+        - path: .github/workflows/release_modal_com.yaml
+        - path: .github/workflows/test.yaml
+        - path: .gitignore
+        - path: .gitmodules
+        - path: .tool-versions
+        - path: CITATION.cff
+        - path: LICENSE
+        - path: README.md
+        - path: docs/assets/cats_coco_sample.jpg
+        - path: docs/assets/create_cli_v2_docs.sh
+        - path: docs/assets/create_openapi_with_server_hook.sh
+        - path: docs/assets/multilingual_calibration.utf8
+        - path: docs/assets/openapi.json
+        - path: docs/benchmarks/benchmarking.md
+        - path: docs/benchmarks/simple_app.py
+        - path: docs/demo_v0_0_1.gif
+        - path: docs/docs/benchmarking.md
+        - path: docs/docs/cli_v2.md
+        - path: docs/docs/client_infinity.md
+        - path: docs/docs/contribution.md
+        - path: docs/docs/deploy.md
+        - path: docs/docs/embed.md
+        - path: docs/docs/index.md
+        - path: docs/docs/integrations.md
+        - path: docs/docs/python_engine.md
+        - path: docs/docs/swagger_ui.md
+        - path: docs/docs/telemetry.md
+        - path: docs/lm_head_to_classifier/convert_lm.py
+        - path: docs/mkdocs.yml
+        - path: docs/ml_system_card.yaml
+        - path: docs/stakeholders.yaml
+        - path: infra/README.md
+        - path: infra/aws_neuron/.dockerignore
+        - path: infra/aws_neuron/Dockerfile.neuron
+        - path: infra/aws_neuron/README.md
+        - path: infra/aws_neuron/requirements_no_gpu.txt
+        - path: infra/baseten/README.md
+        - path: infra/dstack/README.md
+        - path: infra/kubeai_k8s/README.md
+        - path: infra/modal/README.md
+        - path: infra/modal/functional.py
+        - path: infra/modal/webserver.py
+        - path: infra/runpod
+        - path: infra/sap/README.md
+        - path: infra/sap/sap-core-ai
+        - path: infra/skypilot/README.md
+        - path: infra/skypilot/skypilot-infinity.yaml
+        - path: infra/vast/README.md
+        - path: infra/vast/vast_instance_view.png
+        - path: libs/client_infinity/Makefile
+        - path: libs/client_infinity/client_config.yaml
+        - path: libs/client_infinity/infinity_client/.gitignore
+        - path: libs/client_infinity/infinity_client/README.md
+        - path: libs/client_infinity/infinity_client/infinity_client/__init__.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/__init__.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/__init__.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/classify.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings_audio.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/embeddings_image.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/health.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/metrics_metrics_get.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/models.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/redirect_get.py
+        - path: libs/client_infinity/infinity_client/infinity_client/api/default/rerank.py
+        - path: libs/client_infinity/infinity_client/infinity_client/client.py
+        - path: libs/client_infinity/infinity_client/infinity_client/errors.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/__init__.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/audio_embedding_input.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/classify_input.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/classify_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/classify_result.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/classify_result_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/embedding_encoding_format.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/embedding_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/embedding_object_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/http_validation_error.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/image_embedding_input.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/model_info.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/model_info_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/model_info_owned_by.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_audio.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_audio_modality.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_image.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_image_modality.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_text.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_input_text_modality.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_result.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_embedding_result_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/open_ai_model_info.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/re_rank_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/re_rank_result.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/re_rank_result_object.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/rerank_input.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/response_health.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/stats.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/usage.py
+        - path: libs/client_infinity/infinity_client/infinity_client/models/validation_error.py
+        - path: libs/client_infinity/infinity_client/infinity_client/py.typed
+        - path: libs/client_infinity/infinity_client/infinity_client/types.py
+        - path: libs/client_infinity/infinity_client/infinity_client/vision_client.py
+        - path: libs/client_infinity/infinity_client/poetry.lock
+        - path: libs/client_infinity/infinity_client/pyproject.toml
+        - path: libs/client_infinity/run_generate_with_hook.sh
+        - path: libs/client_infinity/run_tests_with_hook.sh
+        - path: libs/client_infinity/template/README.md.jinja
+        - path: libs/client_infinity/template/pypproject.toml.jinja
+        - path: libs/client_infinity/template/vision_client.py
+        - path: libs/client_infinity/tests/conftest.py
+        - path: libs/client_infinity/tests/test_client.py
+        - path: libs/embed_package/Makefile
+        - path: libs/embed_package/README.md
+        - path: libs/embed_package/embed/__init__.py
+        - path: libs/embed_package/embed/_infer.py
+        - path: libs/embed_package/embed/py.typed
+        - path: libs/embed_package/poetry.lock
+        - path: libs/embed_package/pyproject.toml
+        - path: libs/embed_package/tests/__init__.py
+        - path: libs/infinity_emb/.dockerignore
+        - path: libs/infinity_emb/Docker.template.yaml
+        - path: libs/infinity_emb/Dockerfile.amd_auto
+        - path: libs/infinity_emb/Dockerfile.cpu_auto
+        - path: libs/infinity_emb/Dockerfile.jinja2
+        - path: libs/infinity_emb/Dockerfile.nvidia_auto
+        - path: libs/infinity_emb/Dockerfile.trt_onnx_auto
+        - path: libs/infinity_emb/Makefile
+        - path: libs/infinity_emb/README.md
+        - path: libs/infinity_emb/infinity_emb/__init__.py
+        - path: libs/infinity_emb/infinity_emb/_optional_imports.py
+        - path: libs/infinity_emb/infinity_emb/args.py
+        - path: libs/infinity_emb/infinity_emb/cli.py
+        - path: libs/infinity_emb/infinity_emb/engine.py
+        - path: libs/infinity_emb/infinity_emb/env.py
+        - path: libs/infinity_emb/infinity_emb/fastapi_schemas/__init__.py
+        - path: libs/infinity_emb/infinity_emb/fastapi_schemas/data_uri.py
+        - path: libs/infinity_emb/infinity_emb/fastapi_schemas/docs.py
+        - path: libs/infinity_emb/infinity_emb/fastapi_schemas/errors.py
+        - path: libs/infinity_emb/infinity_emb/fastapi_schemas/pydantic_v2.py
+        - path: libs/infinity_emb/infinity_emb/fastapi_schemas/pymodels.py
+        - path: libs/infinity_emb/infinity_emb/inference/__init__.py
+        - path: libs/infinity_emb/infinity_emb/inference/batch_handler.py
+        - path: libs/infinity_emb/infinity_emb/inference/caching_layer.py
+        - path: libs/infinity_emb/infinity_emb/inference/loading_strategy.py
+        - path: libs/infinity_emb/infinity_emb/inference/queue.py
+        - path: libs/infinity_emb/infinity_emb/inference/select_model.py
+        - path: libs/infinity_emb/infinity_emb/inference/threading_asyncio.py
+        - path: libs/infinity_emb/infinity_emb/infinity_server.py
+        - path: libs/infinity_emb/infinity_emb/log_handler.py
+        - path: libs/infinity_emb/infinity_emb/primitives.py
+        - path: libs/infinity_emb/infinity_emb/py.typed
+        - path: libs/infinity_emb/infinity_emb/sync_engine.py
+        - path: libs/infinity_emb/infinity_emb/telemetry.py
+        - path: libs/infinity_emb/infinity_emb/transformer/__init__.py
+        - path: libs/infinity_emb/infinity_emb/transformer/abstract.py
+        - path: libs/infinity_emb/infinity_emb/transformer/acceleration.py
+        - path: libs/infinity_emb/infinity_emb/transformer/audio/__init__.py
+        - path: libs/infinity_emb/infinity_emb/transformer/audio/torch.py
+        - path: libs/infinity_emb/infinity_emb/transformer/audio/utils.py
+        - path: libs/infinity_emb/infinity_emb/transformer/classifier/__init__.py
+        - path: libs/infinity_emb/infinity_emb/transformer/classifier/optimum.py
+        - path: libs/infinity_emb/infinity_emb/transformer/classifier/torch.py
+        - path: libs/infinity_emb/infinity_emb/transformer/crossencoder/__init__.py
+        - path: libs/infinity_emb/infinity_emb/transformer/crossencoder/optimum.py
+        - path: libs/infinity_emb/infinity_emb/transformer/crossencoder/torch.py
+        - path: libs/infinity_emb/infinity_emb/transformer/embedder/__init__.py
+        - path: libs/infinity_emb/infinity_emb/transformer/embedder/ct2.py
+        - path: libs/infinity_emb/infinity_emb/transformer/embedder/dummytransformer.py
+        - path: libs/infinity_emb/infinity_emb/transformer/embedder/neuron.py
+        - path: libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py
+        - path: libs/infinity_emb/infinity_emb/transformer/embedder/sentence_transformer.py
+        - path: libs/infinity_emb/infinity_emb/transformer/quantization/__init__.py
+        - path: libs/infinity_emb/infinity_emb/transformer/quantization/interface.py
+        - path: libs/infinity_emb/infinity_emb/transformer/quantization/quant.py
+        - path: libs/infinity_emb/infinity_emb/transformer/utils.py
+        - path: libs/infinity_emb/infinity_emb/transformer/utils_optimum.py
+        - path: libs/infinity_emb/infinity_emb/transformer/vision/__init__.py
+        - path: libs/infinity_emb/infinity_emb/transformer/vision/torch_vision.py
+        - path: libs/infinity_emb/infinity_emb/transformer/vision/utils.py
+        - path: libs/infinity_emb/poetry.lock
+        - path: libs/infinity_emb/poetry.toml
+        - path: libs/infinity_emb/pyproject.toml
+        - path: libs/infinity_emb/requirements_install_from_poetry.sh
+        - path: libs/infinity_emb/tests/__init__.py
+        - path: libs/infinity_emb/tests/conftest.py
+        - path: libs/infinity_emb/tests/data/audio/beep.wav
+        - path: libs/infinity_emb/tests/data/audio/cat_meow.wav
+        - path: libs/infinity_emb/tests/data/benchmark/benchmark_embed.json
+        - path: libs/infinity_emb/tests/data/benchmark/benchmark_embed_image.json
+        - path: libs/infinity_emb/tests/data/datasets/stsbenchmark.tsv.gz
+        - path: libs/infinity_emb/tests/end_to_end/__init__.py
+        - path: libs/infinity_emb/tests/end_to_end/conftest.py
+        - path: libs/infinity_emb/tests/end_to_end/test_api_with_dummymodel.py
+        - path: libs/infinity_emb/tests/end_to_end/test_authentication.py
+        - path: libs/infinity_emb/tests/end_to_end/test_ct2_sentence.py
+        - path: libs/infinity_emb/tests/end_to_end/test_openapi_client_compat.py
+        - path: libs/infinity_emb/tests/end_to_end/test_optimum_embedding.py
+        - path: libs/infinity_emb/tests/end_to_end/test_sentence_transformers.py
+        - path: libs/infinity_emb/tests/end_to_end/test_sentence_transformers_colbert.py
+        - path: libs/infinity_emb/tests/end_to_end/test_torch_audio.py
+        - path: libs/infinity_emb/tests/end_to_end/test_torch_classify.py
+        - path: libs/infinity_emb/tests/end_to_end/test_torch_reranker.py
+        - path: libs/infinity_emb/tests/end_to_end/test_torch_vision.py
+        - path: libs/infinity_emb/tests/install_test.sh
+        - path: libs/infinity_emb/tests/script_live.py
+        - path: libs/infinity_emb/tests/unit_test/fastapi_schemas/test_data_uri.py
+        - path: libs/infinity_emb/tests/unit_test/fastapi_schemas/test_errors.py
+        - path: libs/infinity_emb/tests/unit_test/fastapi_schemas/test_response.py
+        - path: libs/infinity_emb/tests/unit_test/inference/test_batch_handler.py
+        - path: libs/infinity_emb/tests/unit_test/inference/test_caching_layer.py
+        - path: libs/infinity_emb/tests/unit_test/inference/test_models.py
+        - path: libs/infinity_emb/tests/unit_test/inference/test_select_model.py
+        - path: libs/infinity_emb/tests/unit_test/test_args.py
+        - path: libs/infinity_emb/tests/unit_test/test_cli.py
+        - path: libs/infinity_emb/tests/unit_test/test_engine.py
+        - path: libs/infinity_emb/tests/unit_test/test_infinity_server.py
+        - path: libs/infinity_emb/tests/unit_test/test_log_handler.py
+        - path: libs/infinity_emb/tests/unit_test/test_sync_engine.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/audio/test_audio.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/classifier/test_optimum_classifier.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/classifier/test_torch_classifer.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/crossencoder/test_optimum_crossencoder.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/crossencoder/test_torch_crossencoder.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/embedder/test_torch.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/quantization/test_interface.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/test_utils.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/vision/test_torch_vision.py
+      headSha: edd6b36655ccf807c263676a48d184656be1069d
+      runId: run-2026-02-27-00-11-08
+      summary: ML System Card run run-2026-02-27-00-11-08 observed 242 changed files
+  lastGeneratedAt: '2026-02-27T01:14:39.414Z'
+stakeholderNotes:
+  data-engineer:
+    changes: >-
+      - No significant updates detected.
+
+      - Behavior, data flow, and public APIs described in $.devInsight.architecture.dataFlow ⚠️ and
+      $.devInsight.architecture.publicApis ⚠️ appear consistent with the existing Infinity embedding server.
+
+      - Core components and entrypoints in $.devInsight.codeOverview.components ⚠️ and
+      $.devInsight.codeOverview.entrypoints remain the authoritative references for how data engineers should integrate
+      and operate the service.
+    confidence: 0.2
+    overview: >-
+      The embedding service is a Python-based HTTP system (see $.devInsight.codeOverview.languages) exposing embedding,
+      rerank, and classification capabilities via FastAPI endpoints ⚠️ (see $.devInsight.architecture.publicApis).
+      Clients interact primarily through HTTP routes and a CLI entrypoint (see $.devInsight.codeOverview.entrypoints).
+      Internally, a core server/engine component manages model loading, batching, and inference ⚠️ (see
+      $.devInsight.codeOverview.components). Data likely flows from client requests through FastAPI routing into
+      model-specific transformers before responses are serialized and returned ⚠️ (see
+      $.devInsight.architecture.dataFlow). FastAPI/Uvicorn and ML/transformer libraries form the main dependency surface
+      ⚠️ (see $.devInsight.architecture.depsSummary).
+    textMd: ''
+  data-scientist:
+    changes: >-
+      - $.business.executiveSummary: Wording updated⚠️ to stress Infinity’s role as a generic, open-source REST API
+      server for embeddings and reranking, clarifying performance characteristics (throughput/latency)⚠️.
+
+      - $.business.intendedUse: Clarifies that the primary consumers are developers and infrastructure teams⚠️, with
+      implications for how data scientists integrate via APIs.
+
+      - $.business.useCase: Refines examples of deploying and serving multiple embedding and reranking models under one
+      service⚠️.
+
+      - $.business.userPopulations: Explicitly lists "Data Scientist" among target users⚠️, alongside ML Engineer,
+      Product Manager, and governance-focused roles⚠️.
+    confidence: 0.2
+    overview: >-
+      Infinity⚠️ is described in $.business.executiveSummary as an open-source, high-throughput, low-latency REST API
+      server for embedding and reranking workloads⚠️. For data scientists, the card positions it as infrastructure that
+      exposes multiple models behind a unified API, simplifying experimentation and deployment across text, image, and
+      potentially audio embeddings⚠️. The intended use in $.business.intendedUse emphasizes serving models reliably in
+      production-like environments⚠️, enabling you to focus on model selection, evaluation, and integration rather than
+      bespoke serving stacks⚠️.
+    textMd: ''
+  domain-expert:
+    changes: >-
+      - No significant updates detected in the referenced ML System Card sections ($.business.executiveSummary⚠️,
+      $.business.intendedUse⚠️, $.business.useCase⚠️, $.business.userPopulations⚠️) compared with the baseline for this
+      run.
+
+      - Any minor wording or formatting adjustments, if present, do not materially change the described purpose, usage
+      patterns, or primary user groups of the Infinity system.
+    confidence: 0.2
+    overview: >-
+      According to $.business.executiveSummary⚠️, Infinity is an open‑source, high‑throughput, low‑latency REST API
+      server for deploying and serving embedding and reranking models. As described in $.business.intendedUse⚠️, it is
+      aimed at developers and infrastructure teams who need scalable model serving infrastructure. Per
+      $.business.useCase⚠️, it supports multiple embedding and reranking models behind a unified interface. The listed
+      user populations in $.business.userPopulations⚠️ include Data Scientists, ML Engineers, Product Managers, and
+      Governance / Compliance stakeholders.
+    textMd: ''
+  governance-compliance-ethics-officer:
+    changes: >-
+      - No significant updates detected in $.governance.policies between the base and head revisions.
+
+      - No newly documented governance, compliance, or ethics controls were identified in this run.
+
+      - Existing descriptions related to licensing and contributor obligations under $.governance.policies appear
+      unchanged ⚠️.
+    confidence: 0.2
+    overview: >-
+      The ML System Card’s governance section focuses on licensing and contributor obligations associated with the
+      Infinity project. Under $.governance.policies, the card appears to describe that Infinity is distributed under the
+      MIT License and that contributions must follow defined project rules and standards ⚠️. This section is intended to
+      inform governance, compliance, and ethics stakeholders about the open-source licensing basis, the framework for
+      acceptable contributions, and how these elements support responsible maintenance and oversight of the system over
+      time.
+    textMd: ''
+  governance-officer:
+    changes: >-
+      - No significant updates detected in `$.governance.policies` based on the available comparison metadata.
+
+      - Any detailed modifications to policy wording, contributor obligations, or licensing references ⚠️ are not fully
+      resolvable from the provided run information and should be confirmed by directly reviewing
+      `docs/ml_system_card.yaml` at `$.governance.policies`.
+
+      - Recommend a manual check to verify whether any new restrictions, obligations, or clarifications have been added
+      that could impact Data Scientist workflows or compliance processes.
+    confidence: 0.2
+    overview: >-
+      The ML System Card’s governance section documents high‑level policies governing how the Infinity system is
+      distributed and contributed to. It specifies licensing terms and contribution requirements ⚠️, which are relevant
+      for legal compliance, IP management, and ensuring that Data Scientists understand permissible use and modification
+      of the system. Governance officers can use the policies in `$.governance.policies` as the primary reference for
+      aligning internal procedures (e.g., review, approval, and auditing) with the project’s stated legal and
+      contribution framework.
+    textMd: ''
+  ml-engineer:
+    changes: '- No significant updates detected.'
+    confidence: 0.2
+    overview: >-
+      This repository provides a Python-based embedding and reranking service, with a core engine under
+      $.devInsight.codeOverview.components ⚠️. The service exposes HTTP endpoints for embeddings, reranking,
+      classification, and health checks as summarized in $.devInsight.architecture.publicApis ⚠️. Inference and serving
+      are orchestrated via a CLI entrypoint ("infinity_emb" with a "v2" subcommand) noted in
+      $.devInsight.codeOverview.entrypoints. The stack is primarily Python per $.devInsight.codeOverview.languages, with
+      an HTTP server and routing layer inferred in $.devInsight.architecture.depsSummary ⚠️. Request handling and data
+      flow are outlined at a high level in $.devInsight.architecture.dataFlow ⚠️.
+    textMd: ''
+  product-manager:
+    changes: |-
+      - No significant updates detected in the referenced ML System Card sections:
+        - $.business.executiveSummary ⚠️
+        - $.business.intendedUse ⚠️
+        - $.business.useCase ⚠️
+        - $.business.userPopulations ⚠️
+    confidence: 0.2
+    overview: >-
+      Infinity ⚠️ (from $.business.executiveSummary) is described as an open‑source, high‑throughput, low‑latency REST
+      API server for ML embeddings and reranking. Its intended role ⚠️ (from $.business.intendedUse) is to let
+      developers and infrastructure teams deploy and manage multiple embedding and reranking models behind a unified
+      API, optimizing performance and scalability. Typical use cases ⚠️ (from $.business.useCase) include powering
+      semantic search, recommendations, and retrieval‑augmented applications, primarily for technical and product
+      stakeholders ⚠️ (from $.business.userPopulations) such as Data Scientists, ML Engineers, Product Managers, and
+      governance teams.
+    textMd: ''
+  project-manager:
+    changes: >-
+      - No significant updates detected to the business‑level description fields in the ML System Card (see
+      $.business.*).
+    confidence: 0.2
+    overview: >-
+      According to $.business.executiveSummary ⚠️, Infinity is an open‑source, high‑throughput, low‑latency REST API
+      server for embedding and reranking models. As described in $.business.intendedUse ⚠️, it is intended for
+      developers and infrastructure teams to deploy and operate multiple models behind a unified API. Per
+      $.business.useCase ⚠️, typical uses include serving text, image, audio embeddings and reranking for search,
+      recommendation, and similar workloads. $.business.userPopulations ⚠️ lists core users as Data Scientists, ML
+      Engineers, Product Managers, and Governance/Compliance stakeholders.
+    textMd: ''
+  software-developer:
+    changes: >-
+      - No significant updates detected to the ML System Card fields referenced for this stakeholder.
+
+      - Current understanding of target users remains: ["Data Scientist", "ML Engineer", "Product Manager", "Governance,
+      Compliance & E..."] per $.business.userPopulations ⚠️.
+
+      - Business framing of the system’s purpose and usage patterns in $.business.executiveSummary,
+      $.business.intendedUse, and $.business.useCase ⚠️ appears unchanged in this run.
+    confidence: 0.2
+    overview: >-
+      According to $.business.executiveSummary ⚠️, Infinity is an open‑source, high‑throughput, low‑latency REST API
+      server for deploying and serving embedding and reranking models at scale. Per $.business.intendedUse ⚠️, it is
+      meant to give developers and infrastructure teams a unified service to host multiple models behind a consistent
+      API, simplifying integration into applications and pipelines. As described in $.business.useCase ⚠️, typical usage
+      focuses on search, retrieval‑augmented generation, recommendation, and classification workloads for production
+      environments.
+    textMd: ''
+  ux-researcher:
+    changes: >-
+      - No significant updates detected in the ML System Card fields relevant to UX research.
+
+      - Current descriptions of system purpose and capabilities remain as in: `$.business.executiveSummary`,
+      `$.business.intendedUse`, `$.business.useCase` (⚠️).
+
+      - Listed user populations are unchanged in `$.business.userPopulations` (⚠️).
+
+      - For UX planning, assume the same multi‑stakeholder audience and core tasks (model deployment, monitoring, and
+      usage) as in the prior version of the card.
+    confidence: 0.2
+    overview: >-
+      Infinity is described as an open‑source, high‑throughput, low‑latency REST API server for ML embeddings and
+      reranking (⚠️ $.business.executiveSummary). It is intended to be used by developers and infrastructure teams to
+      deploy and manage multiple embedding and reranking models behind a unified service (⚠️ $.business.intendedUse,
+      $.business.useCase). Primary user populations currently listed include Data Scientists, ML Engineers, Product
+      Managers, and Governance/Compliance stakeholders (⚠️ $.business.userPopulations). UX implications: multi‑role
+      workflows and observability across performance, latency, and reliability.
+    textMd: ''
