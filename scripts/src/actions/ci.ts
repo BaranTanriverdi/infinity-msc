@@ -85,11 +85,11 @@ async function enforceDiffSafety(args: CiArgs): Promise<void> {
     return;
   }
 
-  // Only count diff lines in card output files, not intermediate proposal
-  // artifacts that get pruned and recreated between runs (they can be 10k+ lines).
+  // Only count diff lines in hand-authored / curated card output files, not
+  // intermediate proposal artifacts (pruned between runs) or deterministic
+  // outputs like anchors.json that are fully regenerated every apply.
   const CARD_OUTPUT_PATHS = [
     "docs/ml_system_card.yaml",
-    "docs/ml_system_card.anchors.json",
     "docs/.card_runs",
     "docs/.metrics"
   ];
