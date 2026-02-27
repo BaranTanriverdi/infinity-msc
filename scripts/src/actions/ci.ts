@@ -85,11 +85,19 @@ async function enforceDiffSafety(args: CiArgs): Promise<void> {
     return;
   }
 
-  const stats = await diffShortStat(args.baseRef, args.headRef);
+  // Only count diff lines in card output files, not intermediate proposal
+  // artifacts that get pruned and recreated between runs (they can be 10k+ lines).
+  const CARD_OUTPUT_PATHS = [
+    "docs/ml_system_card.yaml",
+    "docs/ml_system_card.anchors.json",
+    "docs/.card_runs",
+    "docs/.metrics"
+  ];
+  const stats = await diffShortStat(args.baseRef, args.headRef, CARD_OUTPUT_PATHS);
   const totalLines = stats.insertions + stats.deletions;
   const lineLimit = MAX_DIFF_LINES;
   if (totalLines > lineLimit) {
-    throw new Error(`Diff too large: ${totalLines} changed lines (limit ${lineLimit})`);
+    throw new Error(`Diff too large: ${totalLines} changed lines in card outputs (limit ${lineLimit})`);
   }
 
   const headCard = await readFileAtCommit(CARD_PATH, args.headRef);
