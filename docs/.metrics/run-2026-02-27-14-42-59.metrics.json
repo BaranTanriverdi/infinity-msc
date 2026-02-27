@@ -34,5 +34,14 @@
   "pass_notes_completion_tokens": 5256,
   "llm_model": "gpt-5.1",
   "generated_at": "2026-02-27T14:50:15.618Z",
-  "proposal_path": "/home/runner/work/infinity-msc/infinity-msc/docs/.proposals/run-2026-02-27-14-42-59.json"
+  "proposal_path": "/home/runner/work/infinity-msc/infinity-msc/docs/.proposals/run-2026-02-27-14-42-59.json",
+  "decision_accepted_count": 3,
+  "decision_edited_count": 0,
+  "decision_rejected_count": 0,
+  "decision_undecided_count": 0,
+  "decision_accepted_pct": 1,
+  "decision_edited_pct": 0,
+  "decision_rejected_pct": 0,
+  "decision_undecided_pct": 0,
+  "decisions_path": "/home/runner/work/infinity-msc/infinity-msc/docs/.proposals/run-2026-02-27-14-42-59.decisions.json"
 }

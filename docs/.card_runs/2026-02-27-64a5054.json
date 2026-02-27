@@ -1,0 +1,47 @@
+{
+  "engine": "ml-system-card-local",
+  "run_id": "run-2026-02-27-14-42-59",
+  "base_sha": "bb80406b1619aeb8a90d60c947f5f5c9a0ad6c29",
+  "changed_paths": [
+    "$.business.userPopulations",
+    "$.meta.title",
+    "$.provenance.changelog[1]"
+  ],
+  "low_confidence_rows_only": [
+    {
+      "path": "$.business.userPopulations",
+      "confidence": 0.1,
+      "sources": [
+        "docs/stakeholders.yaml#L2"
+      ],
+      "disposition": "accepted"
+    },
+    {
+      "path": "$.meta.title",
+      "confidence": 0.1,
+      "sources": [
+        "README.md#L16"
+      ],
+      "disposition": "accepted"
+    },
+    {
+      "path": "$.provenance.changelog[1]",
+      "confidence": 0.1,
+      "sources": [
+        "libs/infinity_emb/Docker.template.yaml#L1",
+        "libs/infinity_emb/Dockerfile.cpu_auto#L1",
+        "libs/infinity_emb/Dockerfile.intel_auto#L1",
+        "libs/infinity_emb/infinity_emb/_optional_imports.py#L1",
+        "libs/infinity_emb/infinity_emb/primitives.py#L1",
+        "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py#L1",
+        "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py#L1",
+        "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py#L1"
+      ],
+      "disposition": "accepted"
+    }
+  ],
+  "yaml_hash": "64a505458eb49a6c279165e1d8a7a39d933af0c24b469bcc5206f42e871a16d7",
+  "schema_id": "https://ml-system-card.dev/schema/v1",
+  "coverage_non_null": 1,
+  "timestamp": "2026-02-27T19:13:45.173Z"
+}

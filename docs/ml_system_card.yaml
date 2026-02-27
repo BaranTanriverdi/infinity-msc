@@ -1887,6 +1887,52 @@ ai:
           startLine: 1
       source:
         kind: extracted
+    - confidence: 0.1
+      needs_review: false
+      path: $.provenance.changelog[1]
+      repoSources:
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Docker.template.yaml
+          startLine: 1
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Dockerfile.cpu_auto
+          startLine: 1
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/Dockerfile.intel_auto
+          startLine: 1
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/_optional_imports.py
+          startLine: 1
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/primitives.py
+          startLine: 1
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py
+          startLine: 1
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/infinity_emb/transformer/utils_optimum.py
+          startLine: 1
+        - commit: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+          endLine: 1
+          kind: code
+          path: libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py
+          startLine: 1
+      source:
+        kind: extracted
 business:
   executiveSummary: >-
     Infinity is an open‑source, high‑throughput, low‑latency REST API server for serving text, image, and audio
@@ -2409,181 +2455,253 @@ provenance:
       headSha: edd6b36655ccf807c263676a48d184656be1069d
       runId: run-2026-02-27-00-11-08
       summary: ML System Card run run-2026-02-27-00-11-08 observed 242 changed files
-  lastGeneratedAt: '2026-02-27T01:14:39.414Z'
+    - date: '2026-02-27T14:44:08.469Z'
+      files:
+        - path: libs/infinity_emb/Docker.template.yaml
+        - path: libs/infinity_emb/Dockerfile.cpu_auto
+        - path: libs/infinity_emb/Dockerfile.intel_auto
+        - path: libs/infinity_emb/infinity_emb/_optional_imports.py
+        - path: libs/infinity_emb/infinity_emb/primitives.py
+        - path: libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py
+        - path: libs/infinity_emb/infinity_emb/transformer/utils_optimum.py
+        - path: libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py
+      headSha: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85
+      runId: run-2026-02-27-14-42-59
+      summary: ML System Card run run-2026-02-27-14-42-59 observed 8 changed files
+  lastGeneratedAt: '2026-02-27T19:13:44.990Z'
 stakeholderNotes:
   data-engineer:
     changes: >-
-      - No significant updates detected.
+      - Updated container build configuration for embeddings in libs/infinity_emb/Docker.template.yaml and CPU/Intel
+      auto Dockerfiles, likely affecting how embedding services are packaged and deployed.
 
-      - Behavior, data flow, and public APIs described in $.devInsight.architecture.dataFlow ⚠️ and
-      $.devInsight.architecture.publicApis ⚠️ appear consistent with the existing Infinity embedding server.
+      - Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py, which may change
+      when extra libraries (e.g., Optimum) are required vs. optional.
 
-      - Core components and entrypoints in $.devInsight.codeOverview.components ⚠️ and
-      $.devInsight.codeOverview.entrypoints remain the authoritative references for how data engineers should integrate
-      and operate the service.
-    confidence: 0.2
+      - Modified embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, potentially impacting the public
+      embedding API or behavior.
+
+      - Updated Optimum-based embedder implementation and utilities in
+      libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and .../utils_optimum.py, which may affect
+      supported model types or runtime performance.
+
+      - Extended or revised unit tests in libs/infinity_emb/tests/unit_test
+    confidence: 0.1
     overview: >-
-      The embedding service is a Python-based HTTP system (see $.devInsight.codeOverview.languages) exposing embedding,
-      rerank, and classification capabilities via FastAPI endpoints ⚠️ (see $.devInsight.architecture.publicApis).
-      Clients interact primarily through HTTP routes and a CLI entrypoint (see $.devInsight.codeOverview.entrypoints).
-      Internally, a core server/engine component manages model loading, batching, and inference ⚠️ (see
-      $.devInsight.codeOverview.components). Data likely flows from client requests through FastAPI routing into
-      model-specific transformers before responses are serialized and returned ⚠️ (see
-      $.devInsight.architecture.dataFlow). FastAPI/Uvicorn and ML/transformer libraries form the main dependency surface
-      ⚠️ (see $.devInsight.architecture.depsSummary).
+      This component provides transformer-based text embedding capabilities (e.g., via Optimum-backed models) that can
+      be containerized and deployed through the project’s Docker images. It is primarily consumed by programmatic
+      clients (Python) that need efficient embedding generation for downstream ML workflows, such as retrieval and
+      similarity search. Relevant stakeholder groups appear to be captured under $.business.userPopulations ⚠️, with the
+      overall card identified by $.meta.title ⚠️. Operational and review history is tracked in $.provenance.changelog[1]
+      ⚠️.
     textMd: ''
   data-scientist:
     changes: >-
-      - $.business.executiveSummary: Wording updated⚠️ to stress Infinity’s role as a generic, open-source REST API
-      server for embeddings and reranking, clarifying performance characteristics (throughput/latency)⚠️.
+      - Updated Docker templates and CPU/Intel Dockerfiles to refine runtime environments for embedding workloads.
 
-      - $.business.intendedUse: Clarifies that the primary consumers are developers and infrastructure teams⚠️, with
-      implications for how data scientists integrate via APIs.
+      - Adjusted `_optional_imports.py` to handle Optimum-related imports more defensively, improving robustness when
+      optional dependencies are absent.
 
-      - $.business.useCase: Refines examples of deploying and serving multiple embedding and reranking models under one
-      service⚠️.
+      - Modified `primitives.py` and `transformer/embedder/optimum.py` to refine the Optimum-based embedder interface
+      and internal behavior.
 
-      - $.business.userPopulations: Explicitly lists "Data Scientist" among target users⚠️, alongside ML Engineer,
-      Product Manager, and governance-focused roles⚠️.
-    confidence: 0.2
+      - Updated `transformer/utils_optimum.py` to improve utility functions around Optimum model handling (e.g., device
+      or dtype management).
+
+      - Extended and/or updated unit tests in `tests/unit_test/transformer/embedder/test_optimum.py` to validate the
+      revised Optimum integration and prevent regressions.
+    confidence: 0.1
     overview: >-
-      Infinity⚠️ is described in $.business.executiveSummary as an open-source, high-throughput, low-latency REST API
-      server for embedding and reranking workloads⚠️. For data scientists, the card positions it as infrastructure that
-      exposes multiple models behind a unified API, simplifying experimentation and deployment across text, image, and
-      potentially audio embeddings⚠️. The intended use in $.business.intendedUse emphasizes serving models reliably in
-      production-like environments⚠️, enabling you to focus on model selection, evaluation, and integration rather than
-      bespoke serving stacks⚠️.
+      This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer models
+      (through Optimum) for efficient embedding generation in Python workflows. It is intended for model development,
+      evaluation, and deployment pipelines where vector representations are required for search, retrieval, and
+      downstream ML tasks. Primary users likely include Data Scientists (see $.business.userPopulations) ⚠️, who rely on
+      consistent inference behavior, reproducible environments (Docker-based), and tested utilities for model loading,
+      batching, and hardware-specific optimizations.
     textMd: ''
   domain-expert:
     changes: >-
-      - No significant updates detected in the referenced ML System Card sections ($.business.executiveSummary⚠️,
-      $.business.intendedUse⚠️, $.business.useCase⚠️, $.business.userPopulations⚠️) compared with the baseline for this
-      run.
+      - No significant updates detected to documented user populations in $.business.userPopulations for this run (⚠️).
 
-      - Any minor wording or formatting adjustments, if present, do not materially change the described purpose, usage
-      patterns, or primary user groups of the Infinity system.
-    confidence: 0.2
+      - Recent repository changes (e.g., Docker templates, optional imports, Optimum-based embedders, and related tests)
+      primarily affect implementation and infrastructure, not the declared business user populations.
+
+      - If future iterations introduce new user roles (e.g., additional governance, support, or operations personas),
+      these should be reflected explicitly under $.business.userPopulations to keep stakeholder-scoped responsibilities
+      and access expectations accurate.
+    confidence: 0.1
     overview: >-
-      According to $.business.executiveSummary⚠️, Infinity is an open‑source, high‑throughput, low‑latency REST API
-      server for deploying and serving embedding and reranking models. As described in $.business.intendedUse⚠️, it is
-      aimed at developers and infrastructure teams who need scalable model serving infrastructure. Per
-      $.business.useCase⚠️, it supports multiple embedding and reranking models behind a unified interface. The listed
-      user populations in $.business.userPopulations⚠️ include Data Scientists, ML Engineers, Product Managers, and
-      Governance / Compliance stakeholders.
+      This ML system is documented as serving multiple technical and oversight roles in the organization. According to
+      $.business.userPopulations⚠️, the intended users likely include data-centric practitioners (e.g., Data Scientists,
+      ML Engineers) and product-oriented stakeholders (e.g., Product Managers), as well as governance and compliance
+      roles. These groups rely on the system card to understand capability boundaries, integration expectations, and
+      risk considerations for embedding and transformer-based components, particularly around how the model is deployed
+      in production workflows and how responsibilities are distributed across technical and non-technical teams.
     textMd: ''
   governance-compliance-ethics-officer:
     changes: >-
-      - No significant updates detected in $.governance.policies between the base and head revisions.
+      - New provenance entry added at $.provenance.changelog[1], recording this run (ID: run-2026-02-27-14-42-59) and
+      its timestamp.
 
-      - No newly documented governance, compliance, or ethics controls were identified in this run.
+      - The summary in $.provenance.changelog[1].summary documents that an automated ML System Card run was executed for
+      this update.
 
-      - Existing descriptions related to licensing and contributor obligations under $.governance.policies appear
-      unchanged ⚠️.
-    confidence: 0.2
+      - No additional structured fields (e.g., risk, evaluation, or mitigation sections) are confirmed as changed in
+      this diff ⚠️.
+
+      - From a governance/compliance perspective, this update primarily improves traceability by extending the change
+      history, rather than altering declared behaviors or risks of the ML system ⚠️.
+    confidence: 0.1
     overview: >-
-      The ML System Card’s governance section focuses on licensing and contributor obligations associated with the
-      Infinity project. Under $.governance.policies, the card appears to describe that Infinity is distributed under the
-      MIT License and that contributions must follow defined project rules and standards ⚠️. This section is intended to
-      inform governance, compliance, and ethics stakeholders about the open-source licensing basis, the framework for
-      acceptable contributions, and how these elements support responsible maintenance and oversight of the system over
-      time.
+      This ML System Card (⚠️ $.meta.title) documents an embedding component used within the repository’s Python-based
+      stack. It is intended to support oversight by technical and non-technical stakeholders, including ⚠️ Governance,
+      Compliance & Ethics Officers listed in $.business.userPopulations. For this audience, the card should help assess
+      how the embedding system is governed, how changes are tracked over time, and how documentation can be aligned with
+      internal policies on compliance, ethics, and model risk management.
     textMd: ''
   governance-officer:
     changes: >-
-      - No significant updates detected in `$.governance.policies` based on the available comparison metadata.
+      - Updated Docker templates and CPU/Intel auto Dockerfiles (`libs/infinity_emb/Docker.template.yaml`,
+      `Dockerfile.cpu_auto`, `Dockerfile.intel_auto`), affecting deployable runtime images.
 
-      - Any detailed modifications to policy wording, contributor obligations, or licensing references ⚠️ are not fully
-      resolvable from the provided run information and should be confirmed by directly reviewing
-      `docs/ml_system_card.yaml` at `$.governance.policies`.
+      - Adjusted optional import handling in `infinity_emb/_optional_imports.py`, which may change how extra
+      dependencies (e.g., Optimum) are conditionally loaded.
 
-      - Recommend a manual check to verify whether any new restrictions, obligations, or clarifications have been added
-      that could impact Data Scientist workflows or compliance processes.
-    confidence: 0.2
+      - Modified core primitives in `infinity_emb/primitives.py`, potentially impacting how embedding requests are
+      processed.
+
+      - Updated Optimum-based transformer embedder implementation and utilities (`transformer/embedder/optimum.py`,
+      `transformer/utils_optimum.py`), which may alter model loading or inference behavior.
+
+      - Expanded or revised unit tests for the Optimum embedder
+      (`tests/unit_test/transformer/embedder/test_optimum.py`), strengthening regressio
+    confidence: 0.1
     overview: >-
-      The ML System Card’s governance section documents high‑level policies governing how the Infinity system is
-      distributed and contributed to. It specifies licensing terms and contribution requirements ⚠️, which are relevant
-      for legal compliance, IP management, and ensuring that Data Scientists understand permissible use and modification
-      of the system. Governance officers can use the policies in `$.governance.policies` as the primary reference for
-      aligning internal procedures (e.g., review, approval, and auditing) with the project’s stated legal and
-      contribution framework.
+      This update concerns the embedding component in `libs/infinity_emb`, which underpins text representation for
+      downstream ML workflows used by Data Scientists (⚠️ from `$.business.userPopulations`). The system is documented
+      in an ML System Card titled ⚠️“ML System Card (GitHub-native, PR-first)” (`$.meta.title`). Governance relevance
+      centers on how model embeddings are produced, the runtime/container environments allowed in production, and test
+      coverage guarding regressions. The new System Card provenance entry (⚠️ `$.provenance.changelog[1]`) logs this run
+      for traceability and aligns changes with specific SHAs for auditable evolution of the embedding stack.
     textMd: ''
   ml-engineer:
-    changes: '- No significant updates detected.'
-    confidence: 0.2
+    changes: >-
+      - Updated container definitions in libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto, and
+      Dockerfile.intel_auto to refine CPU/Intel deployment environments.
+
+      - Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate
+      Optimum-related features.
+
+      - Refined core embedding primitives in libs/infinity_emb/infinity_emb/primitives.py, likely affecting how
+      transformer embedders are instantiated or invoked.
+
+      - Updated Optimum-based embedder implementation and utilities in
+      libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py and transformer/utils_optimum.py, potentially
+      impacting model loading and runtime configuration.
+
+      - Extended or revised unit coverage in libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py to
+      va
+    confidence: 0.1
     overview: >-
-      This repository provides a Python-based embedding and reranking service, with a core engine under
-      $.devInsight.codeOverview.components ⚠️. The service exposes HTTP endpoints for embeddings, reranking,
-      classification, and health checks as summarized in $.devInsight.architecture.publicApis ⚠️. Inference and serving
-      are orchestrated via a CLI entrypoint ("infinity_emb" with a "v2" subcommand) noted in
-      $.devInsight.codeOverview.entrypoints. The stack is primarily Python per $.devInsight.codeOverview.languages, with
-      an HTTP server and routing layer inferred in $.devInsight.architecture.depsSummary ⚠️. Request handling and data
-      flow are outlined at a high level in $.devInsight.architecture.dataFlow ⚠️.
+      This component provides embedding functionality (Python) for downstream ML systems, likely exposed as part of an
+      "ML System Card (GitHub-native, PR-first)" ⚠️ at $.meta.title. It targets roles such as ML Engineers and related
+      technical users ⚠️ at $.business.userPopulations. The library integrates transformer-based embedders (via Optimum)
+      and supports multiple CPU-oriented container builds, making it suitable for inference services that need
+      reproducible, containerized deployments. Provenance for this run is tracked in the System Card changelog ⚠️ at
+      $.provenance.changelog[1].
     textMd: ''
   product-manager:
-    changes: |-
-      - No significant updates detected in the referenced ML System Card sections:
-        - $.business.executiveSummary ⚠️
-        - $.business.intendedUse ⚠️
-        - $.business.useCase ⚠️
-        - $.business.userPopulations ⚠️
-    confidence: 0.2
+    changes: >-
+      - No direct changes detected to `$.business.userPopulations`; existing user groups (including Product Manager)
+      remain as documented⚠️.
+
+      - Infrastructure updates to Docker templates and CPU/Intel-specific Dockerfiles for `infinity_emb` may affect
+      deployment and operational characteristics, but not declared user populations.
+
+      - Internal library updates (optional imports, Optimum-based embedder utilities, and tests) refine how transformer
+      embeddings are implemented and validated, without altering the System Card’s business-facing fields.
+
+      - No new or removed System Card fields identified as part of this run; monitoring continues for future schema or
+      policy-impacting changes.
+    confidence: 0.1
     overview: >-
-      Infinity ⚠️ (from $.business.executiveSummary) is described as an open‑source, high‑throughput, low‑latency REST
-      API server for ML embeddings and reranking. Its intended role ⚠️ (from $.business.intendedUse) is to let
-      developers and infrastructure teams deploy and manage multiple embedding and reranking models behind a unified
-      API, optimizing performance and scalability. Typical use cases ⚠️ (from $.business.useCase) include powering
-      semantic search, recommendations, and retrieval‑augmented applications, primarily for technical and product
-      stakeholders ⚠️ (from $.business.userPopulations) such as Data Scientists, ML Engineers, Product Managers, and
-      governance teams.
+      This component provides text embedding capabilities via the `infinity_emb` library, integrating transformer-based
+      models through Optimum for efficient, production-grade inference. It is intended for teams building features that
+      rely on semantic search, recommendations, or similarity matching, and needs to balance model performance with
+      deployment constraints (CPU variants, vendor-specific optimizations). Product Managers⚠️ are one of the documented
+      user groups for this system in `$.business.userPopulations`, alongside other technical and governance
+      stakeholders⚠️.
     textMd: ''
   project-manager:
     changes: >-
-      - No significant updates detected to the business‑level description fields in the ML System Card (see
-      $.business.*).
-    confidence: 0.2
+      - Updated container configurations (libs/infinity_emb/Docker.template.yaml, Dockerfile.cpu_auto,
+      Dockerfile.intel_auto) to refine CPU/Intel auto-build deployment paths.
+
+      - Adjusted optional dependency handling in libs/infinity_emb/infinity_emb/_optional_imports.py to better gate
+      features on installed libraries.
+
+      - Modified core embedding primitives in primitives.py to integrate with revised Optimum-based transformers.
+
+      - Updated Optimum embedder implementation and utilities (transformer/embedder/optimum.py,
+      transformer/utils_optimum.py) to improve runtime or compatibility.
+
+      - Expanded/updated unit tests in tests/unit_test/transformer/embedder/test_optimum.py to validate the new Optimum
+      behavior and guard regressions.
+    confidence: 0.1
     overview: >-
-      According to $.business.executiveSummary ⚠️, Infinity is an open‑source, high‑throughput, low‑latency REST API
-      server for embedding and reranking models. As described in $.business.intendedUse ⚠️, it is intended for
-      developers and infrastructure teams to deploy and operate multiple models behind a unified API. Per
-      $.business.useCase ⚠️, typical uses include serving text, image, audio embeddings and reranking for search,
-      recommendation, and similar workloads. $.business.userPopulations ⚠️ lists core users as Data Scientists, ML
-      Engineers, Product Managers, and Governance/Compliance stakeholders.
+      This component provides text embedding capabilities for downstream ML features, mainly serving technical users
+      such as Data Scientists and ML Engineers described in $.business.userPopulations ⚠️. It packages transformer-based
+      embedders (including Optimum-backed models) plus Dockerized runtimes for deployment in CPU-oriented environments.
+      The library’s responsibilities include managing optional model dependencies, exposing a stable embedding
+      interface, and ensuring test coverage so embedding behavior remains consistent across hardware targets and
+      container builds used by product teams.
     textMd: ''
   software-developer:
     changes: >-
-      - No significant updates detected to the ML System Card fields referenced for this stakeholder.
+      - Docker configuration updated for `cpu_auto` and `intel_auto` builds (`libs/infinity_emb/Docker.template.yaml`,
+      related Dockerfiles), which may affect build/runtime environments ⚠️.
 
-      - Current understanding of target users remains: ["Data Scientist", "ML Engineer", "Product Manager", "Governance,
-      Compliance & E..."] per $.business.userPopulations ⚠️.
+      - Optional import behavior adjusted in `infinity_emb/_optional_imports.py`, potentially changing how missing ML
+      dependencies are handled ⚠️.
 
-      - Business framing of the system’s purpose and usage patterns in $.business.executiveSummary,
-      $.business.intendedUse, and $.business.useCase ⚠️ appears unchanged in this run.
-    confidence: 0.2
+      - Core primitives in `infinity_emb/primitives.py` modified, which may impact embedding APIs or behaviors ⚠️.
+
+      - Optimum transformer embedder and utilities updated (`transformer/embedder/optimum.py`,
+      `transformer/utils_optimum.py`), possibly altering model loading or inference paths ⚠️.
+
+      - Unit tests for the Optimum embedder revised (`tests/unit_test/transformer/embedder/test_optimum.py`), reflecting
+      the above implementation changes.
+    confidence: 0.1
     overview: >-
-      According to $.business.executiveSummary ⚠️, Infinity is an open‑source, high‑throughput, low‑latency REST API
-      server for deploying and serving embedding and reranking models at scale. Per $.business.intendedUse ⚠️, it is
-      meant to give developers and infrastructure teams a unified service to host multiple models behind a consistent
-      API, simplifying integration into applications and pipelines. As described in $.business.useCase ⚠️, typical usage
-      focuses on search, retrieval‑augmented generation, recommendation, and classification workloads for production
-      environments.
+      This component provides embedding functionality for transformer models in the `infinity_emb` library, targeting
+      programmatic use by technical users. Based on the system card, primary intended users likely include Data
+      Scientists, ML Engineers, Product Managers, and Governance/Compliance roles ⚠️ as indicated in
+      `$.business.userPopulations`. The code integrates with Optimum-based transformer backends, offers optional
+      dependency handling, and exposes primitives suitable for embedding workflows within Python applications and
+      containerized deployments.
     textMd: ''
   ux-researcher:
     changes: >-
-      - No significant updates detected in the ML System Card fields relevant to UX research.
+      - Updated transformer/Optimum-based embedder implementation, which may affect latency, memory use, and failure
+      modes when generating embeddings.
 
-      - Current descriptions of system purpose and capabilities remain as in: `$.business.executiveSummary`,
-      `$.business.intendedUse`, `$.business.useCase` (⚠️).
+      - Adjusted optional import handling in `infinity_emb/_optional_imports.py`, changing how missing ML dependencies
+      degrade or surface errors.
 
-      - Listed user populations are unchanged in `$.business.userPopulations` (⚠️).
+      - Revised utility functions in `transformer/utils_optimum.py`, potentially impacting supported hardware backends
+      and performance characteristics.
 
-      - For UX planning, assume the same multi‑stakeholder audience and core tasks (model deployment, monitoring, and
-      usage) as in the prior version of the card.
-    confidence: 0.2
+      - Modified Docker templates and Intel/CPU-specific Dockerfiles, which influence deployment environments and thus
+      runtime UX (e.g., cold starts, consistency across hosts).
+
+      - Expanded or updated unit tests for the Optimum embedder to better capture regression and compatibility issues
+      that could indirectly affect UX through stability and reliability.
+    confidence: 0.1
     overview: >-
-      Infinity is described as an open‑source, high‑throughput, low‑latency REST API server for ML embeddings and
-      reranking (⚠️ $.business.executiveSummary). It is intended to be used by developers and infrastructure teams to
-      deploy and manage multiple embedding and reranking models behind a unified service (⚠️ $.business.intendedUse,
-      $.business.useCase). Primary user populations currently listed include Data Scientists, ML Engineers, Product
-      Managers, and Governance/Compliance stakeholders (⚠️ $.business.userPopulations). UX implications: multi‑role
-      workflows and observability across performance, latency, and reliability.
+      This component provides text embedding capabilities used by downstream applications for search, retrieval, and
+      semantic analysis. It wraps transformer models behind a Python API, handling model loading, preprocessing, and
+      vector generation so that product features can consume embeddings without managing ML details. For UX research,
+      this primarily affects how reliably and quickly user text inputs are transformed into vectors that power
+      relevance, recommendations, and content understanding. Primary documented user groups are technical roles (see
+      $.business.userPopulations⚠️), not end-users directly.
     textMd: ''
