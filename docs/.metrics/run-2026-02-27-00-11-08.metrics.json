@@ -43,5 +43,22 @@
   "decision_edited_pct": 0,
   "decision_rejected_pct": 0,
   "decision_undecided_pct": 0,
-  "decisions_path": "/home/runner/work/infinity-msc/infinity-msc/docs/.proposals/run-2026-02-27-00-11-08.decisions.json"
+  "decisions_path": "/home/runner/work/infinity-msc/infinity-msc/docs/.proposals/run-2026-02-27-00-11-08.decisions.json",
+  "apply_success": 1,
+  "schema_valid": 1,
+  "yaml_hash": "f98f573d2b469c4c85092cf341c3ca3531f5de165f9d9a5a5d0ffa3543674f42",
+  "apply_attempts_until_success": 1,
+  "receipt_path": "/home/runner/work/infinity-msc/infinity-msc/docs/.card_runs/2026-02-27-f98f573.json",
+  "accepted_nontrivial_count": 23,
+  "accepted_nontrivial_with_anchor_count": 23,
+  "anchor_compliance_accepted_nontrivial": 1,
+  "resolvable_anchor_count": 307,
+  "total_evaluated_anchor_count": 324,
+  "anchor_resolvability_rate_accepted": 0.9475308641975309,
+  "populated_leaf_count": 394,
+  "populated_leaf_anchored_count": 360,
+  "anchored_field_coverage_leaf": 0.9137055837563451,
+  "added_lines": 2575,
+  "removed_lines": 35,
+  "msc_diff_lines": 2610
 }
