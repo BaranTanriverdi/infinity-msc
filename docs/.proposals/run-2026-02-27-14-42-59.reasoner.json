@@ -1,0 +1,206 @@
+{
+  "promptId": "reasoner.v1",
+  "promptMetadata": {
+    "id": "reasoner.v1",
+    "audience": "card-fact-reasoner",
+    "version": 1,
+    "max_tokens": 4096,
+    "citations": "required",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.9
+    }
+  },
+  "promptDigest": "d1fb8bbfd8301cc346d3801097bb1d9d328aa14e907d3869adaf3ac73acda86a",
+  "mode": "llm",
+  "facts": [
+    {
+      "jsonPath": "$.business.userPopulations",
+      "jsonPointer": "/business/userPopulations",
+      "currentValue": [
+        "Data Scientist",
+        "ML Engineer",
+        "Product Manager",
+        "Governance, Compliance & Ethics Officer",
+        "Data Engineer",
+        "Software Developer",
+        "UX Researcher",
+        "Project Manager",
+        "Domain Expert"
+      ],
+      "proposedValue": [
+        "Data Scientist",
+        "ML Engineer",
+        "Product Manager",
+        "Governance, Compliance & Ethics Officer",
+        "Data Engineer",
+        "Software Developer",
+        "UX Researcher",
+        "Project Manager",
+        "Domain Expert"
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "docs/stakeholders.yaml",
+          "startLine": 2,
+          "endLine": 2,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "config"
+        }
+      ],
+      "confidence": 0.8,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.meta.title",
+      "jsonPointer": "/meta/title",
+      "currentValue": "ML System Card (GitHub-native, PR-first)",
+      "proposedValue": "ML System Card (GitHub-native, PR-first)",
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 16,
+          "endLine": 16,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.95,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.provenance.changelog[1]",
+      "jsonPointer": "/provenance/changelog/1",
+      "proposedValue": {
+        "date": "2026-02-27T14:44:08.469Z",
+        "summary": "ML System Card run run-2026-02-27-14-42-59 observed 8 changed files",
+        "files": [
+          {
+            "path": "libs/infinity_emb/Docker.template.yaml"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.cpu_auto"
+          },
+          {
+            "path": "libs/infinity_emb/Dockerfile.intel_auto"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/_optional_imports.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/primitives.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py"
+          },
+          {
+            "path": "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py"
+          }
+        ],
+        "runId": "run-2026-02-27-14-42-59",
+        "headSha": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85"
+      },
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "libs/infinity_emb/Docker.template.yaml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/Dockerfile.cpu_auto",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/Dockerfile.intel_auto",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/_optional_imports.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/primitives.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/infinity_emb/transformer/utils_optimum.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        },
+        {
+          "path": "libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "4bf797adb84dcc31f23bc853dc0b1e3072c76c85",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.7,
+      "gate": "Warn",
+      "verifierNotes": "Review high-change volume"
+    }
+  ],
+  "coverageNonNull": 1,
+  "lowConfidence": [
+    {
+      "jsonPath": "$.provenance.changelog[1]",
+      "reason": "Review high-change volume"
+    }
+  ],
+  "extractorArtifact": "docs/.proposals/run-2026-02-27-14-42-59.extractor.json",
+  "analysisArtifact": "docs/.analysis/run-2026-02-27-14-42-59.json",
+  "generatedAt": "2026-02-27T14:47:50.828Z",
+  "attempts": 1,
+  "retryReasons": [
+    "Low confidence for $.provenance.changelog[1]: Review high-change volume",
+    "Fact $.provenance.changelog[1] gated as Warn"
+  ],
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-5.1",
+    "requestDigest": "5e0a0992aa0afe906ad15a9091850a4fa285e66328439814a997d6ff11010b3f",
+    "responseDigest": "53d1e3d658f46d2b56fd0a07602decc4642bfd1ab90817c3389baf75a82b222f",
+    "metrics": {
+      "promptTokens": 33427,
+      "completionTokens": 2463,
+      "latencyMs": 15733.503544999985
+    },
+    "promptPreview": "You reconcile extractor suggestions with the current ML System Card to produce the vetted fact list.\n\nDeterminism requirements:\n- Evaluate each extracted fact independently and in `jsonPath` order.\n- Clamp confidence to `[0, 1]` with two decimals.\n- Downgrade gate to `Warn` when anchors are missing; set to `Require` when confidence < 0.65.\n- Never elevate confidence above the extractor's value.\n\nInputs:\nRun ID: run-2026-02-27-14-42-59\nBase SHA: bb80406b1619aeb8a90d60c947f5f5c9a0ad6c29\nHead SHA: 4bf797adb84dcc31f23bc853dc0b1e3072c76c85\nChanged files (8): libs/infinity_emb/Docker.template.yaml, libs/infinity_emb/Dockerfile.cpu_auto, libs/infinity_emb/Dockerfile.intel_auto, libs/infinity_emb/infinity_emb/_optional_imports.py, libs/infinity_emb/infinity_emb/primitives.py, libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py, libs/infinity_emb/infinity_emb/transformer/utils_optimum.py, libs/infinity_emb/tests/unit_test/transformer/embedder/test_optimum.py\nGenerated at: 2026-02-27T14:44:08.464Z\nai:\n  fieldMeta:\n    - confidence: 0.3\n      needs_review: false\n      path: $.business.executiveSummary\n      repoSources:\n        - commit: edd6b36655ccf807c263676a48d184656be1069d\n          endLine: 86\n          kind: docs\n          path: README.md\n          startLine: 14\n        - commit: edd6b36655ccf807c263676a48d184656be1069d\n          endLine: 18\n          kind: code\n          path: libs/infinity_emb/infinity_emb/fastapi_schemas/docs.py\n          startLine: 5\n        - commit: edd6b36655ccf807c263676a48d184656be1069d\n          endLine: 60\n          kind: code\n          path: libs/infinity_emb/pyproject.toml\n          startLine: 1\n      source:\n        kind: inferred\n    - confidence: 0.3\n      needs_review: false\n      path: $.business.intendedUse\n      repoSources:\n        - commit: edd6b36655ccf807c263676a48d184656be1069d\n          endLine: 41\n          kind: docs\n          path: README.md\n          startLine: 18\n        - commit: edd6b36655ccf807c263676a48d1846",
+    "contentPreview": "{\n  \"facts\": [\n    {\n      \"jsonPath\": \"$.business.userPopulations\",\n      \"value\": [\n        \"Data Scientist\",\n        \"ML Engineer\",\n        \"Product Manager\",\n        \"Governance, Compliance & Ethics Officer\",\n        \"Data Engineer\",\n        \"Software Developer\",\n        \"UX Researcher\",\n        \"Project Manager\",\n        \"Domain Expert\"\n      ],\n      \"confidence\": 0.80,\n      \"gate\": \"OK\",\n      \"repoSources\": [\n        {\n          \"path\": \"docs/stakeholders.yaml\",\n          \"startLine\": 2,\n          \"endLine\": 2,\n          \"kind\": \"config\",\n          \"commit\": \"4bf797adb84dcc31f23bc853dc0b1e3072c76c85\"\n        }\n      ],\n      \"verifierNotes\": null\n    },\n    {\n      \"jsonPath\": \"$.meta.title\",\n      \"value\": \"ML System Card (GitHub-native, PR-first)\",\n      \"confidence\": 0.95,\n      \"gate\": \"OK\",\n      \"repoSources\": [\n        {\n          \"path\": \"README.md\",\n          \"startLine\": 16,\n          \"endLine\": 16,\n          \"kind\": \"docs\",\n          \"commit\": \"4bf797adb84dcc31f23bc853dc0b1e3072c76c85\"\n        }\n      ],\n      \"verifierNotes\": null\n    },\n    {\n      \"jsonPath\": \"$.provenance.changelog[1]\",\n      \"value\": {\n        \"date\": \"2026-02-27T14:44:08.469Z\",\n        \"summary\": \"ML System Card run run-2026-02-27-14-42-59 observed 8 changed files\",\n        \"files\": [\n          {\n            \"path\": \"libs/infinity_emb/Docker.template.yaml\"\n          },\n          {\n            \"path\": \"libs/infinity_emb/Dockerfile.cpu_auto\"\n          },\n          {\n            \"path\": \"libs/infinity_emb/Dockerfile.intel_auto\"\n          },\n          {\n            \"path\": \"libs/infinity_emb/infinity_emb/_optional_imports.py\"\n          },\n          {\n            \"path\": \"libs/infinity_emb/infinity_emb/primitives.py\"\n          },\n          {\n            \"path\": \"libs/infinity_emb/infinity_emb/transformer/embedder/optimum.py\"\n          },\n          {\n            \"path\": \"libs/infinity_emb/infinity_emb/transformer/utils_optimum.py\"\n          },\n          {\n            \"path\": \"lib"
+  }
+}
